@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            
+            VStack(spacing: 10) {
+                BasicButton(title: "Sound ID", textColor: .white, backgroundColor: .blue)
+                BasicButton(title: "Explore Birds", textColor: .white, backgroundColor: .blue)
+            }
+            
+            
+        }
+        
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17134F4427CDF29E00CA6BB0 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17134F4327CDF29E00CA6BB0 /* BasicButton.swift */; };
 		17DBA8C227CD1E8E002FDB3D /* Birds_of_IstanbulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBA8C127CD1E8E002FDB3D /* Birds_of_IstanbulApp.swift */; };
 		17DBA8C427CD1E8E002FDB3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBA8C327CD1E8E002FDB3D /* ContentView.swift */; };
 		17DBA8C627CD1E8E002FDB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DBA8C527CD1E8E002FDB3D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17134F4327CDF29E00CA6BB0 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		17DBA8BE27CD1E8E002FDB3D /* Birds of Istanbul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birds of Istanbul.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DBA8C127CD1E8E002FDB3D /* Birds_of_IstanbulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birds_of_IstanbulApp.swift; sourceTree = "<group>"; };
 		17DBA8C327CD1E8E002FDB3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				17DBA8C127CD1E8E002FDB3D /* Birds_of_IstanbulApp.swift */,
 				17DBA8C327CD1E8E002FDB3D /* ContentView.swift */,
+				17134F4327CDF29E00CA6BB0 /* BasicButton.swift */,
 				17DBA8C527CD1E8E002FDB3D /* Assets.xcassets */,
 				17DBA8C727CD1E8E002FDB3D /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17134F4427CDF29E00CA6BB0 /* BasicButton.swift in Sources */,
 				17DBA8C427CD1E8E002FDB3D /* ContentView.swift in Sources */,
 				17DBA8C227CD1E8E002FDB3D /* Birds_of_IstanbulApp.swift in Sources */,
 			);
