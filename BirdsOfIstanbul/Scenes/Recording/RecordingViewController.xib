@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingViewController" customModule="BirdsOfIstanbul" customModuleProvider="target">
+            <connections>
+                <outlet property="audioSpectrumView" destination="5Ls-SC-gL6" id="Sru-ia-hT1"/>
+                <outlet property="playButton" destination="hOS-me-3bM" id="Cu6-Sz-6v7"/>
+                <outlet property="recordListTableView" destination="3rz-ox-jFN" id="6RG-g9-9KP"/>
+                <outlet property="recordingButton" destination="Gyt-20-vJT" id="ud8-Lh-y9h"/>
+                <outlet property="shareButton" destination="fbQ-Lc-qPw" id="pvu-8M-noJ"/>
+                <outlet property="stackView" destination="zLA-90-SIL" id="ed1-2w-qkO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zLA-90-SIL">
+                    <rect key="frame" x="64.5" y="184" width="285" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-20-vJT">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="record.circle" catalog="system" symbolScale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTappedRecordingButton:" destination="-1" eventType="touchUpInside" id="nT6-IN-D9m"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-me-3bM">
+                            <rect key="frame" x="115" y="0.0" width="55" height="70"/>
+                            <color key="tintColor" red="0.3104453848" green="0.73874247439999996" blue="0.48821853799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="play" catalog="system" symbolScale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTappedPlayButton:" destination="-1" eventType="touchUpInside" id="gOJ-Ac-TAq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-Lc-qPw">
+                            <rect key="frame" x="230" y="0.0" width="55" height="70"/>
+                            <color key="tintColor" red="0.3104453848" green="0.73874247439999996" blue="0.48821853799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="shift" catalog="system" symbolScale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTappedShareButton:" destination="-1" eventType="touchUpInside" id="FoI-Be-T8Q"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="OOy-eM-adB"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-SC-gL6" customClass="WaveView" customModule="BirdsOfIstanbul" customModuleProvider="target">
+                    <rect key="frame" x="64.5" y="94" width="285" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="InI-PO-45Y"/>
+                        <constraint firstAttribute="width" constant="285" id="bF2-k0-Pvu"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-ox-jFN">
+                    <rect key="frame" x="64.5" y="274" width="285" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="ZEh-0A-nr8"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kom-jZ-0gA"/>
+                        <outlet property="delegate" destination="-1" id="LdS-Wb-e6W"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5Ls-SC-gL6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="D4A-Rs-53g"/>
+                <constraint firstItem="zLA-90-SIL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GU1-o8-A7T"/>
+                <constraint firstItem="zLA-90-SIL" firstAttribute="top" secondItem="5Ls-SC-gL6" secondAttribute="bottom" constant="50" id="RFi-V5-NGN"/>
+                <constraint firstItem="5Ls-SC-gL6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VQq-XW-SCc"/>
+                <constraint firstItem="3rz-ox-jFN" firstAttribute="top" secondItem="zLA-90-SIL" secondAttribute="bottom" constant="20" id="Y5E-Az-QwA"/>
+                <constraint firstItem="3rz-ox-jFN" firstAttribute="trailing" secondItem="zLA-90-SIL" secondAttribute="trailing" id="ZOK-IG-hh5"/>
+                <constraint firstItem="zLA-90-SIL" firstAttribute="leading" secondItem="5Ls-SC-gL6" secondAttribute="leading" id="aKj-Yt-y68"/>
+                <constraint firstItem="zLA-90-SIL" firstAttribute="trailing" secondItem="5Ls-SC-gL6" secondAttribute="trailing" id="or0-gF-tYj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3rz-ox-jFN" secondAttribute="bottom" constant="10" id="txV-6D-lyb"/>
+                <constraint firstItem="3rz-ox-jFN" firstAttribute="leading" secondItem="zLA-90-SIL" secondAttribute="leading" id="uHM-hq-MuB"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="record.circle" catalog="system" width="128" height="121"/>
+        <image name="shift" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
