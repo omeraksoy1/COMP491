@@ -3,7 +3,9 @@
 ### Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Yong-Xern Bond
 Presentation of what this version contains:
 https://www.youtube.com/shorts/qeLdG62XqyY
+
 Current features:
+
 1) Sound recording.
 2) Playing recorded sounds.
 3) Soundwave animation (place holder).
