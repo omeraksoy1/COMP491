@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		395827590D3C72D313847470 /* Pods_BirdsOfIstanbul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */; };
+		6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6314733227D5F8EE00504E28 /* GoogleService-Info.plist */; };
+		6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314733527D5FDD100504E28 /* AlertViewController.swift */; };
+		6314733827D5FDD100504E28 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6314733627D5FDD100504E28 /* AlertViewController.xib */; };
+		636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B115827CFBC4500116A58 /* BaseViewController.swift */; };
+		636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B116027CFBEC800116A58 /* UIViewController+Ext.swift */; };
+		636B116D27CFC11100116A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B116C27CFC11100116A58 /* Main.storyboard */; };
+		6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C4FF27CFC1F90092E2CC /* RootViewController.swift */; };
+		6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */; };
+		6392C51027CFC6A80092E2CC /* WalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */; };
+		6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C51127CFC83F0092E2CC /* LoadingViewController.swift */; };
+		6392C51427CFC83F0092E2CC /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6392C51227CFC83F0092E2CC /* LoadingViewController.xib */; };
+		6392C51627CFC89A0092E2CC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C51527CFC89A0092E2CC /* UIView+Ext.swift */; };
+		63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F8807F27D28646006B1F7C /* RecordingViewController.swift */; };
+		63F8808227D28646006B1F7C /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F8808027D28646006B1F7C /* RecordingViewController.xib */; };
+		63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F8808627D2B078006B1F7C /* String+Ext.swift */; };
+		63F8808B27D2C55E006B1F7C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F8808A27D2C55E006B1F7C /* WaveView.swift */; };
+		E108DED827CF7A0F00801830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108DED727CF7A0F00801830 /* AppDelegate.swift */; };
+		E108DEDA27CF7A0F00801830 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108DED927CF7A0F00801830 /* SceneDelegate.swift */; };
+		E108DEE127CF7A1600801830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E108DEE027CF7A1600801830 /* Assets.xcassets */; };
+		E108DEE427CF7A1600801830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E108DEE227CF7A1600801830 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.release.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.release.xcconfig"; sourceTree = "<group>"; };
+		6314733227D5F8EE00504E28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6314733527D5FDD100504E28 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		6314733627D5FDD100504E28 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		636B115827CFBC4500116A58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		636B116027CFBEC800116A58 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		636B116C27CFC11100116A58 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6392C4FF27CFC1F90092E2CC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughViewController.xib; sourceTree = "<group>"; };
+		6392C51127CFC83F0092E2CC /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		6392C51227CFC83F0092E2CC /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		6392C51527CFC89A0092E2CC /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		63F8807F27D28646006B1F7C /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		63F8808027D28646006B1F7C /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
+		63F8808627D2B078006B1F7C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		63F8808A27D2C55E006B1F7C /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdsOfIstanbul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E108DED427CF7A0F00801830 /* BirdsOfIstanbul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdsOfIstanbul.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E108DED727CF7A0F00801830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E108DED927CF7A0F00801830 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E108DEE027CF7A1600801830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E108DEE327CF7A1600801830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E108DEE527CF7A1600801830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.debug.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E108DED127CF7A0F00801830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395827590D3C72D313847470 /* Pods_BirdsOfIstanbul.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6314733427D5FDBC00504E28 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				6314733527D5FDD100504E28 /* AlertViewController.swift */,
+				6314733627D5FDD100504E28 /* AlertViewController.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		636B116227CFBF9800116A58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				636B116027CFBEC800116A58 /* UIViewController+Ext.swift */,
+				6392C51527CFC89A0092E2CC /* UIView+Ext.swift */,
+				63F8808627D2B078006B1F7C /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		636B116327CFBFE100116A58 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				63F8807E27D285EF006B1F7C /* Recording */,
+				6392C50827CFC3280092E2CC /* Walkthrough */,
+				6392C50627CFC25E0092E2CC /* Base */,
+				6392C50127CFC23B0092E2CC /* Root */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6392C50127CFC23B0092E2CC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6392C4FF27CFC1F90092E2CC /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		6392C50627CFC25E0092E2CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6314733427D5FDBC00504E28 /* Alert */,
+				6392C50727CFC31E0092E2CC /* Loading */,
+				636B115827CFBC4500116A58 /* BaseViewController.swift */,
+			);
+			name = Base;
+			path = Base/Base;
+			sourceTree = "<group>";
+		};
+		6392C50727CFC31E0092E2CC /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				6392C51127CFC83F0092E2CC /* LoadingViewController.swift */,
+				6392C51227CFC83F0092E2CC /* LoadingViewController.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		6392C50827CFC3280092E2CC /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */,
+				6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		63F8807E27D285EF006B1F7C /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				63F8807F27D28646006B1F7C /* RecordingViewController.swift */,
+				63F8808027D28646006B1F7C /* RecordingViewController.xib */,
+				63F8808A27D2C55E006B1F7C /* WaveView.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		BBA29D98C2A0C476834C70C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */,
+				077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB6DB40E1B85A7365C2BACE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E108DECB27CF7A0F00801830 = {
+			isa = PBXGroup;
+			children = (
+				E108DED627CF7A0F00801830 /* BirdsOfIstanbul */,
+				E108DED527CF7A0F00801830 /* Products */,
+				BBA29D98C2A0C476834C70C4 /* Pods */,
+				CB6DB40E1B85A7365C2BACE8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E108DED527CF7A0F00801830 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E108DED427CF7A0F00801830 /* BirdsOfIstanbul.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E108DED627CF7A0F00801830 /* BirdsOfIstanbul */ = {
+			isa = PBXGroup;
+			children = (
+				636B116327CFBFE100116A58 /* Scenes */,
+				636B116227CFBF9800116A58 /* Extensions */,
+				E108DED727CF7A0F00801830 /* AppDelegate.swift */,
+				E108DED927CF7A0F00801830 /* SceneDelegate.swift */,
+				636B116C27CFC11100116A58 /* Main.storyboard */,
+				E108DEE027CF7A1600801830 /* Assets.xcassets */,
+				E108DEE227CF7A1600801830 /* LaunchScreen.storyboard */,
+				E108DEE527CF7A1600801830 /* Info.plist */,
+				6314733227D5F8EE00504E28 /* GoogleService-Info.plist */,
+			);
+			path = BirdsOfIstanbul;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E108DED327CF7A0F00801830 /* BirdsOfIstanbul */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E108DEE827CF7A1600801830 /* Build configuration list for PBXNativeTarget "BirdsOfIstanbul" */;
+			buildPhases = (
+				69786859600D3E6CE658533D /* [CP] Check Pods Manifest.lock */,
+				E108DED027CF7A0F00801830 /* Sources */,
+				E108DED127CF7A0F00801830 /* Frameworks */,
+				E108DED227CF7A0F00801830 /* Resources */,
+				556053FB23F44900C451E215 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BirdsOfIstanbul;
+			productName = BirdsOfIstanbul;
+			productReference = E108DED427CF7A0F00801830 /* BirdsOfIstanbul.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E108DECC27CF7A0F00801830 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					E108DED327CF7A0F00801830 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = E108DECF27CF7A0F00801830 /* Build configuration list for PBXProject "BirdsOfIstanbul" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E108DECB27CF7A0F00801830;
+			productRefGroup = E108DED527CF7A0F00801830 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E108DED327CF7A0F00801830 /* BirdsOfIstanbul */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E108DED227CF7A0F00801830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E108DEE427CF7A1600801830 /* LaunchScreen.storyboard in Resources */,
+				6392C51027CFC6A80092E2CC /* WalkthroughViewController.xib in Resources */,
+				63F8808227D28646006B1F7C /* RecordingViewController.xib in Resources */,
+				E108DEE127CF7A1600801830 /* Assets.xcassets in Resources */,
+				6392C51427CFC83F0092E2CC /* LoadingViewController.xib in Resources */,
+				636B116D27CFC11100116A58 /* Main.storyboard in Resources */,
+				6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */,
+				6314733827D5FDD100504E28 /* AlertViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		556053FB23F44900C451E215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69786859600D3E6CE658533D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BirdsOfIstanbul-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E108DED027CF7A0F00801830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F8808B27D2C55E006B1F7C /* WaveView.swift in Sources */,
+				6392C51627CFC89A0092E2CC /* UIView+Ext.swift in Sources */,
+				63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */,
+				6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */,
+				E108DED827CF7A0F00801830 /* AppDelegate.swift in Sources */,
+				6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */,
+				636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */,
+				6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */,
+				6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */,
+				E108DEDA27CF7A0F00801830 /* SceneDelegate.swift in Sources */,
+				63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */,
+				636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E108DEE227CF7A1600801830 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E108DEE327CF7A1600801830 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E108DEE627CF7A1600801830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E108DEE727CF7A1600801830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E108DEE927CF7A1600801830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.canxkoz.BirdsOfIstanbul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E108DEEA27CF7A1600801830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.canxkoz.BirdsOfIstanbul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E108DECF27CF7A0F00801830 /* Build configuration list for PBXProject "BirdsOfIstanbul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E108DEE627CF7A1600801830 /* Debug */,
+				E108DEE727CF7A1600801830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E108DEE827CF7A1600801830 /* Build configuration list for PBXNativeTarget "BirdsOfIstanbul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E108DEE927CF7A1600801830 /* Debug */,
+				E108DEEA27CF7A1600801830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E108DECC27CF7A0F00801830 /* Project object */;
+}
