@@ -3,7 +3,7 @@
 ### Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Yong-Xern Bond
 
 Presentation of what this version contains:
-https://www.youtube.com/shorts/qeLdG62XqyY
+https://www.youtube.com/watch?v=SH1Yj7DvCIc
 
 Current features:
 
