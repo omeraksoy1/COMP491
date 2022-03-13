@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */; };
+		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
+		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
 		395827590D3C72D313847470 /* Pods_BirdsOfIstanbul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */; };
 		6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6314733227D5F8EE00504E28 /* GoogleService-Info.plist */; };
 		6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314733527D5FDD100504E28 /* AlertViewController.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.release.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.release.xcconfig"; sourceTree = "<group>"; };
+		17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBirdsView.swift; sourceTree = "<group>"; };
+		17E5A2CA27DE474400B97A8D /* BirdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdList.swift; sourceTree = "<group>"; };
+		17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRowView.swift; sourceTree = "<group>"; };
 		6314733227D5F8EE00504E28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6314733527D5FDD100504E28 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		6314733627D5FDD100504E28 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
@@ -70,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170E95D327DE440200632BC2 /* ExploreBirds */ = {
+			isa = PBXGroup;
+			children = (
+				17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */,
+				17E5A2CA27DE474400B97A8D /* BirdList.swift */,
+				17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */,
+			);
+			path = ExploreBirds;
+			sourceTree = "<group>";
+		};
 		6314733427D5FDBC00504E28 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		636B116327CFBFE100116A58 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				170E95D327DE440200632BC2 /* ExploreBirds */,
 				63F8807E27D285EF006B1F7C /* Recording */,
 				6392C50827CFC3280092E2CC /* Walkthrough */,
 				6392C50627CFC25E0092E2CC /* Base */,
@@ -320,9 +337,12 @@
 			files = (
 				63F8808B27D2C55E006B1F7C /* WaveView.swift in Sources */,
 				6392C51627CFC89A0092E2CC /* UIView+Ext.swift in Sources */,
+				17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */,
 				63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */,
+				17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */,
 				6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */,
 				E108DED827CF7A0F00801830 /* AppDelegate.swift in Sources */,
+				17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */,
 				6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */,
 				636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */,
 				6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class WalkthroughViewController: BaseViewController {
     
@@ -21,5 +22,11 @@ class WalkthroughViewController: BaseViewController {
     @IBAction func didTappedSoundID(_ sender: Any) {
         let recordingVC = RecordingViewController()
         navigationController?.pushViewController(recordingVC, animated: true)
+    }
+    
+    @IBAction func exploreBirdsPressed(_ sender: Any) {
+        let exploreBirdsView = ExploreBirdsView()
+        let viewController = UIHostingController(rootView: exploreBirdsView)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

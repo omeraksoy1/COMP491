@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,6 +37,15 @@
                         <action selector="didTappedSoundID:" destination="-1" eventType="touchUpInside" id="Gzk-on-gZb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2wa-rt-Pyp">
+                    <rect key="frame" x="140" y="490" width="134" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Explore Birds"/>
+                    <connections>
+                        <action selector="exploreBirdsPressed:" destination="-1" eventType="touchUpInside" id="t7e-bE-daq"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,7 +53,7 @@
                 <constraint firstItem="MlY-De-XaR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Upu-vD-Zxy"/>
                 <constraint firstItem="MlY-De-XaR" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Wbo-HV-gL2"/>
             </constraints>
-            <point key="canvasLocation" x="133" y="126"/>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </view>
     </objects>
     <resources>

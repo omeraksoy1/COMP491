@@ -22,5 +22,6 @@ var birds = [
     Bird(name: "Dove", description: "Test description 2", image: "dove"),
     Bird(name: "Eurasian Blackbird", description: "Test description 3", image: "eurasianBlackbird"),
     Bird(name: "European Robin", description: "Test description 4", image: "europeanRobin"),
-    Bird(name: "European Starling", description: "Test description 4", image: "europeanStarling")
+    Bird(name: "European Starling", description: "Test description 5", image: "europeanStarling"),
+    Bird(name: "European Goldfinch", description: "Test description 6", image: "europeanGoldfinch")
 ]
