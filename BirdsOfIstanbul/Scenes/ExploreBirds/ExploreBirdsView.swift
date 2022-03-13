@@ -32,14 +32,31 @@ struct ExploreBirdsView: View {
                         .foregroundColor(.gray)
                         //.padding(.trailing, 10)
                  }
-                .padding(.horizontal, 10)
+                .padding(.horizontal)
                 .padding(.vertical, 10)
                 .frame(width: 360, height: 45)
                 .background(Color.primary.opacity(0.08))
                 .cornerRadius(10)
+                .padding()
                 
-                Spacer()
+                HStack {
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.6))
+                        .frame(height: 1)
+                    
+                }
+                .padding()
+                
             }
+            
+            ScrollView(.vertical, showsIndicators: false, content: {
+                
+                VStack {
+                    ForEach(birds) {bird in
+                        BirdRowView(bird: bird)
+                    }
+                }
+            })
             
         }
     }
