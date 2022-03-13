@@ -53,7 +53,9 @@ struct ExploreBirdsView: View {
                 
                 VStack {
                     ForEach(birds) {bird in
-                        BirdRowView(bird: bird)
+                        if searchWord == "" || bird.name.lowercased().contains(searchWord.lowercased()) {
+                            BirdRowView(bird: bird)
+                        }
                     }
                 }
             })
