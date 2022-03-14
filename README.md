@@ -13,3 +13,5 @@ Current features:
 4) Gathering location information.
 5) Displaying recorded sounds in a scrollable table view with dates/times.
 6) Working backend integration: sending recording to firebase.
+7) Explore Birds page with placeholder birds in a Scrollable list.
+8) Search function within the ScrollView.
