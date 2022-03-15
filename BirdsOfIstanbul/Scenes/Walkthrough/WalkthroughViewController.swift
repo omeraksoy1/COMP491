@@ -29,4 +29,8 @@ class WalkthroughViewController: BaseViewController {
         let viewController = UIHostingController(rootView: exploreBirdsView)
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func loadWithImport(with file: Record) {
+        
+    }
 }

@@ -22,6 +22,7 @@ class RecordingViewController: BaseViewController {
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var recordListTableView: UITableView!
     
+    var importedRecord: Record?
     private var recordList: [Record] = [] {
         didSet {
             recordListTableView.reloadData()
@@ -50,6 +51,13 @@ class RecordingViewController: BaseViewController {
     var locationManager: CLLocationManager!
     var player: AVAudioPlayer!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let importedRecord = importedRecord {
+            recordList.append(importedRecord)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setRecordingState()

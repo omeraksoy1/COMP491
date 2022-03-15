@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>MPEG-4 Audio File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>m4a</string>
+			</array>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.apple.m4a-audio</string>
+			</array>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>m4a</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>

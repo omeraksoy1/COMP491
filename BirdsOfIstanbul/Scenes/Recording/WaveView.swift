@@ -28,11 +28,11 @@ class WaveView: UIView {
     var preferredColor = UIColor.red
     
     private func startDisplayLink() {
-            startTime = CACurrentMediaTime()
-            self.displayLink?.invalidate()
-            let displayLink = CADisplayLink(target: self, selector:#selector(handleDisplayLink(_:)))
-            displayLink.add(to: .main, forMode: .common)
-            self.displayLink = displayLink
+        startTime = CACurrentMediaTime()
+        self.displayLink?.invalidate()
+        let displayLink = CADisplayLink(target: self, selector:#selector(handleDisplayLink(_:)))
+        displayLink.add(to: .main, forMode: .common)
+        self.displayLink = displayLink
     }
     
     @objc private func handleDisplayLink(_ displayLink: CADisplayLink) {
@@ -42,7 +42,7 @@ class WaveView: UIView {
     }
     
     private func stopDisplayLink() {
-           displayLink?.invalidate()
+        displayLink?.invalidate()
     }
     
     func animationStart(direction: Direction, speed: Double, preferredColor: UIColor = .red) {
