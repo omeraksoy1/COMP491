@@ -11,6 +11,7 @@ struct ExploreBirdsView: View {
     
     @State var searchWord = ""
     
+    
     var body: some View {
         
         VStack {
@@ -64,8 +65,10 @@ struct ExploreBirdsView: View {
     }
 }
 
+/*
 struct ExploreBirdsView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreBirdsView()
     }
 }
+*/

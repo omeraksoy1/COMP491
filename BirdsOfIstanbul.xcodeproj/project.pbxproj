@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A5E8E627E88AC80060A658 /* BirdPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5E8E527E88AC80060A658 /* BirdPopupView.swift */; };
 		17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */; };
 		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
 		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.release.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.release.xcconfig"; sourceTree = "<group>"; };
+		14A5E8E527E88AC80060A658 /* BirdPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdPopupView.swift; sourceTree = "<group>"; };
 		17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBirdsView.swift; sourceTree = "<group>"; };
 		17E5A2CA27DE474400B97A8D /* BirdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdList.swift; sourceTree = "<group>"; };
 		17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRowView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		170E95D327DE440200632BC2 /* ExploreBirds */ = {
 			isa = PBXGroup;
 			children = (
+				14A5E8E527E88AC80060A658 /* BirdPopupView.swift */,
 				17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */,
 				17E5A2CA27DE474400B97A8D /* BirdList.swift */,
 				17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */,
@@ -349,6 +352,7 @@
 				6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */,
 				E108DEDA27CF7A0F00801830 /* SceneDelegate.swift in Sources */,
 				63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */,
+				14A5E8E627E88AC80060A658 /* BirdPopupView.swift in Sources */,
 				636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
