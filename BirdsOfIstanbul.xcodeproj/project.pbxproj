@@ -11,7 +11,7 @@
 		17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */; };
 		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
 		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
-		395827590D3C72D313847470 /* Pods_BirdsOfIstanbul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */; };
+		1D7B06CA737D20D15A301209 /* Pods_BirdsOfIstanbul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EACDB2237DE478D86B5E57 /* Pods_BirdsOfIstanbul.framework */; };
 		6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6314733227D5F8EE00504E28 /* GoogleService-Info.plist */; };
 		6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314733527D5FDD100504E28 /* AlertViewController.swift */; };
 		6314733827D5FDD100504E28 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6314733627D5FDD100504E28 /* AlertViewController.xib */; };
@@ -35,11 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.release.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.release.xcconfig"; sourceTree = "<group>"; };
 		14A5E8E527E88AC80060A658 /* BirdPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdPopupView.swift; sourceTree = "<group>"; };
 		17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBirdsView.swift; sourceTree = "<group>"; };
 		17E5A2CA27DE474400B97A8D /* BirdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdList.swift; sourceTree = "<group>"; };
 		17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRowView.swift; sourceTree = "<group>"; };
+		54EACDB2237DE478D86B5E57 /* Pods_BirdsOfIstanbul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdsOfIstanbul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBB064B6BACAF1F05881920 /* Pods-BirdsOfIstanbul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.release.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.release.xcconfig"; sourceTree = "<group>"; };
 		6314733227D5F8EE00504E28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6314733527D5FDD100504E28 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		6314733627D5FDD100504E28 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
@@ -56,14 +57,13 @@
 		63F8808027D28646006B1F7C /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		63F8808627D2B078006B1F7C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		63F8808A27D2C55E006B1F7C /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
-		C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdsOfIstanbul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E108DED427CF7A0F00801830 /* BirdsOfIstanbul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdsOfIstanbul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E108DED727CF7A0F00801830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E108DED927CF7A0F00801830 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E108DEE027CF7A1600801830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E108DEE327CF7A1600801830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E108DEE527CF7A1600801830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.debug.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.debug.xcconfig"; sourceTree = "<group>"; };
+		F54A3BEF5E8FF9364E272274 /* Pods-BirdsOfIstanbul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdsOfIstanbul.debug.xcconfig"; path = "Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				395827590D3C72D313847470 /* Pods_BirdsOfIstanbul.framework in Frameworks */,
+				1D7B06CA737D20D15A301209 /* Pods_BirdsOfIstanbul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +87,14 @@
 				17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */,
 			);
 			path = ExploreBirds;
+			sourceTree = "<group>";
+		};
+		619DB032F989697C6D6CDDD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54EACDB2237DE478D86B5E57 /* Pods_BirdsOfIstanbul.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6314733427D5FDBC00504E28 /* Alert */ = {
@@ -170,18 +178,10 @@
 		BBA29D98C2A0C476834C70C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */,
-				077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */,
+				F54A3BEF5E8FF9364E272274 /* Pods-BirdsOfIstanbul.debug.xcconfig */,
+				5CBB064B6BACAF1F05881920 /* Pods-BirdsOfIstanbul.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		CB6DB40E1B85A7365C2BACE8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C483ED0A7A287FA09F705390 /* Pods_BirdsOfIstanbul.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E108DECB27CF7A0F00801830 = {
@@ -190,7 +190,7 @@
 				E108DED627CF7A0F00801830 /* BirdsOfIstanbul */,
 				E108DED527CF7A0F00801830 /* Products */,
 				BBA29D98C2A0C476834C70C4 /* Pods */,
-				CB6DB40E1B85A7365C2BACE8 /* Frameworks */,
+				619DB032F989697C6D6CDDD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,11 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E108DEE827CF7A1600801830 /* Build configuration list for PBXNativeTarget "BirdsOfIstanbul" */;
 			buildPhases = (
-				69786859600D3E6CE658533D /* [CP] Check Pods Manifest.lock */,
+				74BD33759253E1757D663680 /* [CP] Check Pods Manifest.lock */,
 				E108DED027CF7A0F00801830 /* Sources */,
 				E108DED127CF7A0F00801830 /* Frameworks */,
 				E108DED227CF7A0F00801830 /* Resources */,
-				556053FB23F44900C451E215 /* [CP] Embed Pods Frameworks */,
+				9DE3D951A0C1D88308CA9A90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,24 +292,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		556053FB23F44900C451E215 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		69786859600D3E6CE658533D /* [CP] Check Pods Manifest.lock */ = {
+		74BD33759253E1757D663680 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,6 +312,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE3D951A0C1D88308CA9A90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BirdsOfIstanbul/Pods-BirdsOfIstanbul-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -489,7 +489,7 @@
 		};
 		E108DEE927CF7A1600801830 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F26ED6B5681C765DA784E304 /* Pods-BirdsOfIstanbul.debug.xcconfig */;
+			baseConfigurationReference = F54A3BEF5E8FF9364E272274 /* Pods-BirdsOfIstanbul.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,7 +519,7 @@
 		};
 		E108DEEA27CF7A1600801830 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 077C63C35DB5BDF8E70BB583 /* Pods-BirdsOfIstanbul.release.xcconfig */;
+			baseConfigurationReference = 5CBB064B6BACAF1F05881920 /* Pods-BirdsOfIstanbul.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

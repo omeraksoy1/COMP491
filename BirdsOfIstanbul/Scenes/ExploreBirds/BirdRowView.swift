@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PopupDialog
 
 struct BirdRowView: View, Identifiable {
     let id: UUID
