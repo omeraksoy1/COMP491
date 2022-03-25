@@ -17,6 +17,7 @@
                 <outlet property="recordingButton" destination="Gyt-20-vJT" id="ud8-Lh-y9h"/>
                 <outlet property="shareButton" destination="fbQ-Lc-qPw" id="pvu-8M-noJ"/>
                 <outlet property="stackView" destination="zLA-90-SIL" id="ed1-2w-qkO"/>
+                <outlet property="stopRecordButton" destination="uVt-4j-uvR" id="B7s-sV-ufc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zLA-90-SIL">
-                    <rect key="frame" x="64.5" y="184" width="285" height="70"/>
+                    <rect key="frame" x="64.5" y="219" width="285" height="70"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyt-20-vJT">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
@@ -75,7 +76,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-ox-jFN">
-                    <rect key="frame" x="64.5" y="274" width="285" height="300"/>
+                    <rect key="frame" x="64.5" y="309" width="285" height="300"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="ZEh-0A-nr8"/>
@@ -85,17 +86,35 @@
                         <outlet property="delegate" destination="-1" id="LdS-Wb-e6W"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVt-4j-uvR">
+                    <rect key="frame" x="182" y="154" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="7qy-yd-P6F"/>
+                        <constraint firstAttribute="height" constant="50" id="xhH-bm-rOg"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5Ls-SC-gL6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="D4A-Rs-53g"/>
                 <constraint firstItem="zLA-90-SIL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GU1-o8-A7T"/>
-                <constraint firstItem="zLA-90-SIL" firstAttribute="top" secondItem="5Ls-SC-gL6" secondAttribute="bottom" constant="50" id="RFi-V5-NGN"/>
                 <constraint firstItem="5Ls-SC-gL6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VQq-XW-SCc"/>
                 <constraint firstItem="3rz-ox-jFN" firstAttribute="top" secondItem="zLA-90-SIL" secondAttribute="bottom" constant="20" id="Y5E-Az-QwA"/>
                 <constraint firstItem="3rz-ox-jFN" firstAttribute="trailing" secondItem="zLA-90-SIL" secondAttribute="trailing" id="ZOK-IG-hh5"/>
                 <constraint firstItem="zLA-90-SIL" firstAttribute="leading" secondItem="5Ls-SC-gL6" secondAttribute="leading" id="aKj-Yt-y68"/>
+                <constraint firstItem="zLA-90-SIL" firstAttribute="top" secondItem="uVt-4j-uvR" secondAttribute="bottom" constant="15" id="b60-yw-eeh"/>
+                <constraint firstItem="uVt-4j-uvR" firstAttribute="top" secondItem="5Ls-SC-gL6" secondAttribute="bottom" constant="20" id="f5Q-XX-00Z"/>
+                <constraint firstItem="uVt-4j-uvR" firstAttribute="centerX" secondItem="5Ls-SC-gL6" secondAttribute="centerX" id="mfJ-hW-Qev"/>
                 <constraint firstItem="zLA-90-SIL" firstAttribute="trailing" secondItem="5Ls-SC-gL6" secondAttribute="trailing" id="or0-gF-tYj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3rz-ox-jFN" secondAttribute="bottom" constant="10" id="txV-6D-lyb"/>
                 <constraint firstItem="3rz-ox-jFN" firstAttribute="leading" secondItem="zLA-90-SIL" secondAttribute="leading" id="uHM-hq-MuB"/>
@@ -104,6 +123,7 @@
         </view>
     </objects>
     <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play" catalog="system" width="120" height="128"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
         <image name="shift" catalog="system" width="128" height="106"/>
@@ -112,6 +132,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -20,6 +20,7 @@ class RecordingViewController: BaseViewController {
     @IBOutlet private weak var recordingButton: UIButton!
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var shareButton: UIButton!
+    @IBOutlet private weak var stopRecordButton: UIButton!
     @IBOutlet private weak var recordListTableView: UITableView!
     
     var importedRecord: Record?
@@ -45,7 +46,6 @@ class RecordingViewController: BaseViewController {
         }
     }
     
-    var stopRecordingButton: UIButton!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var locationManager: CLLocationManager!
@@ -78,7 +78,7 @@ class RecordingViewController: BaseViewController {
                 }
             }
         } catch {
-            presentAlert(title: "Hata", message: "Lütfen cihaz donanımlarını kontrol ediniz.", buttonTitle: "Tamam")
+            presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
         }
     }
     
@@ -115,10 +115,10 @@ class RecordingViewController: BaseViewController {
             audioRecorder.delegate = self
             audioRecorder.record()
             audioSpectrumView.isHidden = false
-            stopRecordingButton.isHidden = false
+            stopRecordButton.isHidden = false
             recordingButton.isEnabled = false
         } catch {
-            presentAlert(title: "Hata", message: "Lütfen cihaz donanımlarını kontrol ediniz.", buttonTitle: "Tamam")
+            presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
         }
     }
     
@@ -129,7 +129,7 @@ class RecordingViewController: BaseViewController {
     
     @objc func finishRecording() {
         DispatchQueue.main.async {
-            self.stopRecordingButton.isHidden = true
+            self.stopRecordButton.isHidden = true
             self.recordingButton.isEnabled = true
             self.audioSpectrumView.isHidden = true
         }
@@ -145,15 +145,9 @@ class RecordingViewController: BaseViewController {
     }
     
     private func configureStopRecordingButton() {
-        let buttonImage = UIImage(systemName: "pause.fill")?.withTintColor(.lightGray, renderingMode: .alwaysOriginal)
-        stopRecordingButton = UIButton(frame: CGRect(x: stackView.frame.midX - 48, y: stackView.frame.midY - 24, width: 64, height: 64))
-        stopRecordingButton.layer.cornerRadius = 32
-        stopRecordingButton.setImage(buttonImage, for: .normal)
-        stopRecordingButton.backgroundColor = .red
-        stopRecordingButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
-        stopRecordingButton.addTarget(self, action: #selector(finishRecording), for: .touchUpInside)
-        view.addSubview(stopRecordingButton)
-        stopRecordingButton.isHidden = true
+        stopRecordButton.addTarget(self, action: #selector(finishRecording), for: .touchUpInside)
+        view.addSubview(stopRecordButton)
+        stopRecordButton.isHidden = true
     }
     
     private func playSelectedRecording() {
@@ -168,7 +162,7 @@ class RecordingViewController: BaseViewController {
             player.delegate = self
             player.play()
         } catch {
-            presentAlert(title: "Hata", message: "Lütfen cihaz donanımlarını kontrol ediniz.", buttonTitle: "Tamam")
+            presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
         }
     }
     
@@ -194,10 +188,10 @@ class RecordingViewController: BaseViewController {
             self?.hideLoading()
             
             if error == nil {
-                self?.presentAlert(title: "Başarılı", message: "Sunucuya yüklendi.", buttonTitle: "Tamam")
+                self?.presentAlert(title: "Success", message: "Uploaded successfully.", buttonTitle: "OK")
             }
             else {
-                self?.presentAlert(title: "Hata", message: "Sunucuya yüklenirken hata oluştu. Lütfen tekrar deneyiniz.", buttonTitle: "Tamam")
+                self?.presentAlert(title: "Error", message: "An error occurred while uploading to the server. Please try again.", buttonTitle: "OK")
             }
         }
     }

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RootViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let walkthroughViewController = WalkthroughViewController.instantiate()
-        navigationController?.pushViewController(walkthroughViewController, animated: true)
+        let loginView = LoginView()
+        let viewController = UIHostingController(rootView: loginView)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

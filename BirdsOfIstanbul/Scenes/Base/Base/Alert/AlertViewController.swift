@@ -12,7 +12,7 @@ class AlertViewController: UIViewController {
     let containerView = AlertContainer()
     let titleLabel = TitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = BodyLabel(textAlignment: .center)
-    let actionButton = Button(backgroundColor: .systemGreen, title: "Tamam")
+    let actionButton = BOIButton(backgroundColor: .systemGreen, title: "Tamam")
     
     var alertTitle: String?
     var message: String?
@@ -168,7 +168,7 @@ class BodyLabel: UILabel {
     }
 }
 
-class Button: UIButton {
+class BOIButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()

@@ -34,3 +34,17 @@ class WalkthroughViewController: BaseViewController {
         
     }
 }
+
+struct WalkthroughUIViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> WalkthroughViewController {
+        let viewController = WalkthroughViewController.instantiate()
+        viewController.navigationController?.navigationItem.hidesBackButton = true
+        
+        return viewController
+    }
+    
+    func updateUIViewController(_ uiViewController: WalkthroughViewController, context: Context) {
+    }
+    
+    typealias UIViewControllerType = WalkthroughViewController
+}
