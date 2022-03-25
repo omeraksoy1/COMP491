@@ -18,12 +18,14 @@
 		636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B115827CFBC4500116A58 /* BaseViewController.swift */; };
 		636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B116027CFBEC800116A58 /* UIViewController+Ext.swift */; };
 		636B116D27CFC11100116A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B116C27CFC11100116A58 /* Main.storyboard */; };
+		63750AA727EDCA0300842F47 /* UINavigationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63750AA627EDCA0300842F47 /* UINavigationView+Ext.swift */; };
 		6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C4FF27CFC1F90092E2CC /* RootViewController.swift */; };
 		6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */; };
 		6392C51027CFC6A80092E2CC /* WalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */; };
 		6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C51127CFC83F0092E2CC /* LoadingViewController.swift */; };
 		6392C51427CFC83F0092E2CC /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6392C51227CFC83F0092E2CC /* LoadingViewController.xib */; };
 		6392C51627CFC89A0092E2CC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C51527CFC89A0092E2CC /* UIView+Ext.swift */; };
+		63A7C13627ED9ADD003811FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7C13527ED9ADD003811FB /* LoginView.swift */; };
 		63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F8807F27D28646006B1F7C /* RecordingViewController.swift */; };
 		63F8808227D28646006B1F7C /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F8808027D28646006B1F7C /* RecordingViewController.xib */; };
 		63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F8808627D2B078006B1F7C /* String+Ext.swift */; };
@@ -47,12 +49,14 @@
 		636B115827CFBC4500116A58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		636B116027CFBEC800116A58 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		636B116C27CFC11100116A58 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		63750AA627EDCA0300842F47 /* UINavigationView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationView+Ext.swift"; sourceTree = "<group>"; };
 		6392C4FF27CFC1F90092E2CC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughViewController.xib; sourceTree = "<group>"; };
 		6392C51127CFC83F0092E2CC /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		6392C51227CFC83F0092E2CC /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		6392C51527CFC89A0092E2CC /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		63A7C13527ED9ADD003811FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63F8807F27D28646006B1F7C /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		63F8808027D28646006B1F7C /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		63F8808627D2B078006B1F7C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				636B116027CFBEC800116A58 /* UIViewController+Ext.swift */,
 				6392C51527CFC89A0092E2CC /* UIView+Ext.swift */,
 				63F8808627D2B078006B1F7C /* String+Ext.swift */,
+				63750AA627EDCA0300842F47 /* UINavigationView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		636B116327CFBFE100116A58 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				63A7C13427ED9AB6003811FB /* Login */,
 				170E95D327DE440200632BC2 /* ExploreBirds */,
 				63F8807E27D285EF006B1F7C /* Recording */,
 				6392C50827CFC3280092E2CC /* Walkthrough */,
@@ -163,6 +169,14 @@
 				6392C50E27CFC6A80092E2CC /* WalkthroughViewController.xib */,
 			);
 			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		63A7C13427ED9AB6003811FB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				63A7C13527ED9ADD003811FB /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		63F8807E27D285EF006B1F7C /* Recording */ = {
@@ -348,7 +362,9 @@
 				17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */,
 				6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */,
 				636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */,
+				63A7C13627ED9ADD003811FB /* LoginView.swift in Sources */,
 				6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */,
+				63750AA727EDCA0300842F47 /* UINavigationView+Ext.swift in Sources */,
 				6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */,
 				E108DEDA27CF7A0F00801830 /* SceneDelegate.swift in Sources */,
 				63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */,

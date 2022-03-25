@@ -8,7 +8,10 @@ target 'BirdsOfIstanbul' do
   pod 'Firebase'
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
+  pod 'FirebaseAuth'
   pod 'NVActivityIndicatorView'
+  pod 'ActivityIndicatorView'
+  pod 'AlertToast'
   # Pods for BirdsOfIstanbul
 
 end
