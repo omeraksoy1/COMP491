@@ -68,6 +68,14 @@ struct LoginView: View {
             
             
             Spacer()
+            
+            HStack{
+                Text("Don't have an account?")
+            
+                NavigationLink("Sign up", destination: SignUpView())
+                    .foregroundColor(.blue)
+            }
+            
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
             .toast(isPresenting: $showAlert, duration: 2) {

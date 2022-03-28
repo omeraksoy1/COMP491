@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14A5E8E627E88AC80060A658 /* BirdPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5E8E527E88AC80060A658 /* BirdPopupView.swift */; };
+		17E1AAC327F0B471003EDF17 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1AAC227F0B471003EDF17 /* SignUpView.swift */; };
 		17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */; };
 		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
 		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		14A5E8E527E88AC80060A658 /* BirdPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdPopupView.swift; sourceTree = "<group>"; };
+		17E1AAC227F0B471003EDF17 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBirdsView.swift; sourceTree = "<group>"; };
 		17E5A2CA27DE474400B97A8D /* BirdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdList.swift; sourceTree = "<group>"; };
 		17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRowView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				63A7C13527ED9ADD003811FB /* LoginView.swift */,
+				17E1AAC227F0B471003EDF17 /* SignUpView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */,
 				63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */,
 				17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */,
+				17E1AAC327F0B471003EDF17 /* SignUpView.swift in Sources */,
 				6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */,
 				E108DED827CF7A0F00801830 /* AppDelegate.swift in Sources */,
 				17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */,
