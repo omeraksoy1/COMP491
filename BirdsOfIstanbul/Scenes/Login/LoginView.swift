@@ -51,17 +51,18 @@ struct LoginView: View {
             ActivityIndicatorView(isVisible: self.$showLoadingIndicator, type: .rotatingDots)
                 .frame(width: 30, height: 30)
                 .foregroundColor(.green)
-            Button(action: {
-                self.isButtonHidden = true
-                self.showLoadingIndicator = true
-                signInUser(userEmail: email, userPassword: password)
-            }) {
-                Text("Login")
-                    .foregroundColor(.white)
-            }.frame(width: 300, height: isButtonHidden ? 0 : 40 , alignment: .center)
-                .background(!email.isEmpty && !password.isEmpty ? .green.opacity(0.7) : .gray)
-                .cornerRadius(8)
-                .disabled(!loginProcess && !email.isEmpty && !password.isEmpty ? false : true)
+                Button(action: {
+                    self.isButtonHidden = true
+                    self.showLoadingIndicator = true
+                    signInUser(userEmail: email, userPassword: password)
+                }) {
+                    Text("Login")
+                        .foregroundColor(.white)
+                }.frame(width: 300, height: isButtonHidden ? 0 : 40 , alignment: .center)
+                    .background(!email.isEmpty && !password.isEmpty ? .green.opacity(0.7) : .gray)
+                    .cornerRadius(8)
+                    .disabled(!loginProcess && !email.isEmpty && !password.isEmpty ? false : true)
+            
             
             NavigationLink(destination: WalkthroughUIViewController().navigationBarBackButtonHidden(true), isActive: $loginSuccess) {
             }.disabled(loginSuccess)

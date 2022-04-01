@@ -20,6 +20,8 @@ class WalkthroughViewController: BaseViewController {
     }
     
     @IBAction func didTappedSoundID(_ sender: Any) {
+        //let recordingVC = RecordingViewController()
+        //navigationController?.pushViewController(recordingVC, animated: true)
         let recordingVC = RecordingViewController()
         navigationController?.pushViewController(recordingVC, animated: true)
     }

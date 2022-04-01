@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		14A5E8E627E88AC80060A658 /* BirdPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5E8E527E88AC80060A658 /* BirdPopupView.swift */; };
+		14B8798127F0DC14006AC19E /* NewRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B8798027F0DC14006AC19E /* NewRecordingViewController.swift */; };
+		14B8798327F0E8A1006AC19E /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B8798227F0E8A1006AC19E /* AudioSpectrogram.swift */; };
+		14B8798527F1220D006AC19E /* SpectrogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B8798427F1220D006AC19E /* SpectrogramView.swift */; };
 		17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */; };
 		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
 		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		14A5E8E527E88AC80060A658 /* BirdPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdPopupView.swift; sourceTree = "<group>"; };
+		14B8798027F0DC14006AC19E /* NewRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordingViewController.swift; sourceTree = "<group>"; };
+		14B8798227F0E8A1006AC19E /* AudioSpectrogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
+		14B8798427F1220D006AC19E /* SpectrogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrogramView.swift; sourceTree = "<group>"; };
 		17E5A2C627DE44AC00B97A8D /* ExploreBirdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBirdsView.swift; sourceTree = "<group>"; };
 		17E5A2CA27DE474400B97A8D /* BirdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdList.swift; sourceTree = "<group>"; };
 		17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRowView.swift; sourceTree = "<group>"; };
@@ -185,6 +191,9 @@
 				63F8807F27D28646006B1F7C /* RecordingViewController.swift */,
 				63F8808027D28646006B1F7C /* RecordingViewController.xib */,
 				63F8808A27D2C55E006B1F7C /* WaveView.swift */,
+				14B8798027F0DC14006AC19E /* NewRecordingViewController.swift */,
+				14B8798227F0E8A1006AC19E /* AudioSpectrogram.swift */,
+				14B8798427F1220D006AC19E /* SpectrogramView.swift */,
 			);
 			path = Recording;
 			sourceTree = "<group>";
@@ -353,11 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F8808B27D2C55E006B1F7C /* WaveView.swift in Sources */,
+				14B8798527F1220D006AC19E /* SpectrogramView.swift in Sources */,
 				6392C51627CFC89A0092E2CC /* UIView+Ext.swift in Sources */,
 				17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */,
 				63F8808127D28646006B1F7C /* RecordingViewController.swift in Sources */,
 				17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */,
 				6392C51327CFC83F0092E2CC /* LoadingViewController.swift in Sources */,
+				14B8798327F0E8A1006AC19E /* AudioSpectrogram.swift in Sources */,
 				E108DED827CF7A0F00801830 /* AppDelegate.swift in Sources */,
 				17E5A2C727DE44AC00B97A8D /* ExploreBirdsView.swift in Sources */,
 				6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */,
@@ -370,6 +381,7 @@
 				63F8808727D2B078006B1F7C /* String+Ext.swift in Sources */,
 				14A5E8E627E88AC80060A658 /* BirdPopupView.swift in Sources */,
 				636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */,
+				14B8798127F0DC14006AC19E /* NewRecordingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ZC4TUPG52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
 				INFOPLIST_KEY_NSMainNibFile = Main;
@@ -541,7 +553,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ZC4TUPG52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
 				INFOPLIST_KEY_NSMainNibFile = Main;
