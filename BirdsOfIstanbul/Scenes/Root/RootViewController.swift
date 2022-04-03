@@ -7,13 +7,20 @@
 
 import UIKit
 import SwiftUI
-
+import FirebaseAuth
 class RootViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loginView = LoginView()
-        let viewController = UIHostingController(rootView: loginView)
-        navigationController?.pushViewController(viewController, animated: true)
+        Auth.auth().addStateDidChangeListener { [weak self] _, user in
+            if user != nil {
+                let walkthrough = WalkthroughViewController()
+                self?.navigationController?.pushViewController(walkthrough, animated: true)
+            } else {
+                let loginView = LoginView()
+                let viewController = UIHostingController(rootView: loginView)
+                self?.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
     }
 }

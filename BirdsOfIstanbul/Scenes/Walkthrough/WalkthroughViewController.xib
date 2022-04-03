@@ -37,8 +37,8 @@
                         <action selector="didTappedSoundID:" destination="-1" eventType="touchUpInside" id="Gzk-on-gZb"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M4-iP-dGD">
-                    <rect key="frame" x="111" y="576" width="193" height="49"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M4-iP-dGD">
+                    <rect key="frame" x="110.5" y="565.5" width="193" height="38.5"/>
                     <color key="backgroundColor" red="0.3104453848" green="0.73874247439999996" blue="0.48821853799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
@@ -56,15 +56,38 @@
                         <action selector="exploreBirdsPressed:" destination="-1" eventType="touchUpInside" id="cvh-0J-seN"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myk-jf-Iyo">
+                    <rect key="frame" x="150" y="637" width="114" height="35"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="114" id="F7N-fv-5Lm"/>
+                        <constraint firstAttribute="height" constant="35" id="OK8-D5-uOz"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Sign Out">
+                        <fontDescription key="titleFontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.alpha">
+                            <real key="value" value="0.75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTappedSignOut:" destination="-1" eventType="touchUpInside" id="1oA-da-RyC"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="2M4-iP-dGD" firstAttribute="top" secondItem="MlY-De-XaR" secondAttribute="bottom" constant="27" id="A4f-Z0-rVG"/>
+                <constraint firstItem="Myk-jf-Iyo" firstAttribute="top" secondItem="2M4-iP-dGD" secondAttribute="bottom" constant="33" id="Fhi-6p-nLF"/>
                 <constraint firstItem="2M4-iP-dGD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Q0e-cu-CZj"/>
                 <constraint firstItem="MlY-De-XaR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="456" id="RNW-dz-ecT"/>
                 <constraint firstItem="MlY-De-XaR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Upu-vD-Zxy"/>
                 <constraint firstItem="MlY-De-XaR" firstAttribute="width" secondItem="2M4-iP-dGD" secondAttribute="width" id="hDa-bB-u3T"/>
+                <constraint firstItem="Myk-jf-Iyo" firstAttribute="centerX" secondItem="2M4-iP-dGD" secondAttribute="centerX" id="hR7-1h-Sut"/>
                 <constraint firstItem="MlY-De-XaR" firstAttribute="height" secondItem="2M4-iP-dGD" secondAttribute="height" id="q3j-S0-WUL"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
@@ -73,6 +96,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

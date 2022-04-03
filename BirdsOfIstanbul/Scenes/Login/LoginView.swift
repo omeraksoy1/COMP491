@@ -62,11 +62,6 @@ struct LoginView: View {
                 .background(!email.isEmpty && !password.isEmpty ? .green.opacity(0.7) : .gray)
                 .cornerRadius(8)
                 .disabled(!loginProcess && !email.isEmpty && !password.isEmpty ? false : true)
-            
-            NavigationLink(destination: WalkthroughUIViewController().navigationBarBackButtonHidden(true), isActive: $loginSuccess) {
-            }.disabled(loginSuccess)
-            
-            
             Spacer()
             
             HStack{

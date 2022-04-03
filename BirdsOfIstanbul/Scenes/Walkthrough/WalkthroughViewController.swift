@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import FirebaseAuth
 
 class WalkthroughViewController: BaseViewController {
     
@@ -28,6 +29,15 @@ class WalkthroughViewController: BaseViewController {
         let exploreBirdsView = ExploreBirdsView()
         let viewController = UIHostingController(rootView: exploreBirdsView)
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func didTappedSignOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            presentAlert(title: "Error", message: "Authorization server error.", buttonTitle: "OK")
+        }
+       
     }
     
     func loadWithImport(with file: Record) {
