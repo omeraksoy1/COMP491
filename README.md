@@ -1,5 +1,6 @@
-#Birds of Istanbul
-Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
+# Birds of Istanbul
+
+##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
 YouTube link displaying most of the features of current version. (v0.3-0.4)
 
