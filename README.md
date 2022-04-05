@@ -23,7 +23,7 @@ Previously added features:
 6) Displaying recorded sounds in a scrollable table view with dates/times.
 7) Working backend integration: sending recording to firebase.
 8) Explore Birds page with placeholder birds in a Scrollable list.
-2) Search function within the ScrollView.
-3) Being able to share sounds on iOS files /anywhere on the phone (including VoiceMemos) with our application.
-4) Being able to upload local files that are shared with our application to our backend.
-5) Being able to play local files that are shared with our application through our sound player.
+9) Search function within the ScrollView.
+10) Being able to share sounds on iOS files /anywhere on the phone (including VoiceMemos) with our application.
+11) Being able to upload local files that are shared with our application to our backend.
+12) Being able to play local files that are shared with our application through our sound player.
