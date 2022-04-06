@@ -10,6 +10,7 @@ import AVFoundation
 import MapKit
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
 
 typealias Record = (path: String, title: String, dataKey: String)
 
@@ -172,6 +173,9 @@ class RecordingViewController: BaseViewController {
         shareButton.isEnabled = !value
     }
     
+    let db = Firestore.firestore()
+    let auth = Auth.auth()
+    
     private func uploadSelectedSoundFile() {
         let resourceName = recordList.filter { $0.path == recordingSelected?.path }.first?.path
         let childName = recordList.filter { $0.path == recordingSelected?.path }.first?.dataKey
@@ -193,6 +197,26 @@ class RecordingViewController: BaseViewController {
             else {
                 self?.presentAlert(title: "Error", message: "An error occurred while uploading to the server. Please try again.", buttonTitle: "OK")
             }
+        }
+        
+        
+        let pathReference = storage.reference(withPath: childName)
+        //var downloadURL: URL?
+        
+        pathReference.downloadURL { downloadUrl, error in
+            if error != nil {
+              print(error) // throw error and cancel operation
+          } else {
+              if self.auth.currentUser?.uid != nil {
+                  self.db.collection(self.auth.currentUser!.uid).addDocument(data: ["location" :
+                                                                                        ["Latitude" : self.userLocation.coordinate.latitude,
+                                                                                         "Longitude" : self.userLocation.coordinate.longitude],
+                                                                                    "time" : String().getCurrentTime(),
+                                                                                    "audioURL" : downloadUrl!.absoluteString])
+              } else {
+                  return // implement some error popup
+              }
+          }
         }
     }
     

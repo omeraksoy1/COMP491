@@ -33,6 +33,7 @@ struct LoginView: View {
                     .foregroundColor(.gray)
                     .padding(.horizontal, 10)
                     .disableAutocorrection(true)
+                    .autocapitalization(.none)
             }.frame(width: 300, height: 40, alignment: .center)
                 .border(.gray, width: 0.3)
             
