@@ -37,6 +37,15 @@ class BaseViewController: UIViewController {
         }
     }
     
+    func showPredicting() {
+        if !(navigationController?.visibleViewController is LoadingViewController) {
+            let loadingViewController = LoadingViewController.instantiateToPresent()
+            navigationController?.present(loadingViewController, animated: false)
+            loadingViewController.prepareToPredict()
+        }
+        
+    }
+    
     func presentAlert(title: String, message: String, buttonTitle: String){
         DispatchQueue.main.async {
             let alertVC = AlertViewController(title: title, message: message, buttonTitle: buttonTitle)
