@@ -11,12 +11,11 @@ import MapKit
 import FirebaseFirestore
 import FirebaseStorage
 
-//typealias Record = (path: String, title: String, dataKey: String)
+typealias Record = (path: String, title: String, dataKey: String)
 
 class RecordingViewController: BaseViewController {
     
     @IBOutlet private weak var audioSpectrumView: WaveView!
-    var audioSpectrogram = AudioSpectrogram()
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var recordingButton: UIButton!
     @IBOutlet private weak var playButton: UIButton!
@@ -52,8 +51,6 @@ class RecordingViewController: BaseViewController {
     var locationManager: CLLocationManager!
     var player: AVAudioPlayer!
     
-    //var audioWriter: AVAssetWriter!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let importedRecord = importedRecord {
@@ -63,14 +60,6 @@ class RecordingViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //BEGIN TEST
-        audioSpectrogram = AudioSpectrogram()
-        audioSpectrogram.contentsGravity = .resize
-        view.layer.addSublayer(audioSpectrogram)
-        
-        view.backgroundColor = .black
-        
-        //END TEST
         setRecordingState()
         setLocationManager()
         setRecordListTableView()
@@ -113,11 +102,6 @@ class RecordingViewController: BaseViewController {
     
     private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("\(userLocation.coordinate.latitude):\(userLocation.coordinate.longitude).wav")
-        //do {
-        //audioWriter = try AVAssetWriter(outputURL: audioFilename, fileType: AVFileType.wav)
-        //}catch {
-        //    fatalError("Cannot create audio output device")
-        //}
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatLinearPCM),
@@ -126,23 +110,7 @@ class RecordingViewController: BaseViewController {
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
-        /*let writerSettings = [
-            AVFormatIDKey: Int(kAudioFormatLinearPCM),
-            AVSampleRateKey: 44100,
-            AVNumberOfChannelsKey: 1,
-            AVLinearPCMIsBigEndianKey: false
-        ] as [String : Any] */
-        
-        //let audioWriterInput = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: writerSettings)
-        //audioWriterInput.expectsMediaDataInRealTime = true
-        //if audioWriter.canAdd(audioWriterInput) {
-        //    audioWriter.add(audioWriterInput)
-        //}
-        
         do {
-            self.audioSpectrogram.isHidden = false
-            audioSpectrogram.startRunning()
-            //audioWriter.startWriting()
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
@@ -164,8 +132,6 @@ class RecordingViewController: BaseViewController {
             self.stopRecordButton.isHidden = true
             self.recordingButton.isEnabled = true
             self.audioSpectrumView.isHidden = true
-            self.audioSpectrogram.stopRunning()
-            self.audioSpectrogram.isHidden = true
         }
         let fileName = "\(userLocation.coordinate.latitude):\(userLocation.coordinate.longitude).wav"
         let record = Record(
@@ -176,6 +142,7 @@ class RecordingViewController: BaseViewController {
         recordList.append(record)
         audioRecorder.stop()
         audioRecorder = nil
+        self.audioSpectrogram.rawAudioData = []
     }
     
     private func configureStopRecordingButton() {
@@ -186,14 +153,22 @@ class RecordingViewController: BaseViewController {
     
     private func playSelectedRecording() {
         isButtonsDeactivated(value: true)
-        audioSpectrumView.isHidden = false
+        //audioSpectrumView.isHidden = false
         let resourceName = recordList.filter { $0.path == recordingSelected?.path }.first?.path
         guard let resource = resourceName,
               let url = URL(string: resource) else { return }
         do {
+            let rawAudio = DataLoader.loadAudioSamplesArrayOf(Float.self, atUrl: url)
+            var intRawAudio = [Int16]()
+            for data in rawAudio! {
+                intRawAudio.append(Int16(data))
+            }
+            audioSpectrogram.rawAudioData = intRawAudio
+            audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
             player.prepareToPlay()
             player.delegate = self
+            audioSpectrogram.isHidden = false
             player.play()
         } catch {
             presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
@@ -248,16 +223,14 @@ class RecordingViewController: BaseViewController {
     @IBAction func didTappedShareButton(_ sender: Any) {
         uploadSelectedSoundFile()
     }
-    
-    override func viewDidLayoutSubviews() {
-        audioSpectrogram.frame = audioSpectrumView.frame
-        }
 }
 
 extension RecordingViewController: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             recordListTableView.isUserInteractionEnabled = true
+            audioSpectrogram.rawAudioData = []
+            audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
         }
     }
 }
@@ -281,6 +254,7 @@ extension RecordingViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = recordListTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = recordList[indexPath.row].title
         cell.textLabel?.textAlignment = .center
+        
         return cell
     }
     
@@ -295,5 +269,7 @@ extension RecordingViewController: AVAudioPlayerDelegate {
         recordListTableView.isUserInteractionEnabled = true
         configureAudioSpectrumView()
         player.stop()
+        audioSpectrogram.rawAudioData = []
+        audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
     }
 }
