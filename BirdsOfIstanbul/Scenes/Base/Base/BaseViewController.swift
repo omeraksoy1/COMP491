@@ -22,6 +22,7 @@ class BaseViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.tintColor = .systemGreen
+        navigationController?.navigationItem.hidesBackButton = true
     }
     
     func showLoading() {
@@ -35,6 +36,15 @@ class BaseViewController: UIViewController {
         if (navigationController?.visibleViewController is LoadingViewController) {
             navigationController?.dismiss(animated: false, completion: nil)
         }
+    }
+    
+    func showPredicting() {
+        if !(navigationController?.visibleViewController is LoadingViewController) {
+            let loadingViewController = LoadingViewController.instantiateToPresent()
+            navigationController?.present(loadingViewController, animated: false)
+            loadingViewController.prepareToPredict()
+        }
+        
     }
     
     func presentAlert(title: String, message: String, buttonTitle: String){

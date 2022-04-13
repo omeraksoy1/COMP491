@@ -10,7 +10,9 @@ import SwiftUI
 struct ExploreBirdsView: View {
     
     @State var searchWord = ""
-    
+    init() {
+        UITabBar.appearance().isTranslucent = true
+    }
     
     var body: some View {
         

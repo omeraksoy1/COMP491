@@ -76,14 +76,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         )
         
         
-        let walkthroughVC = WalkthroughViewController.instantiate()
-        let recordingVC = RecordingViewController()
-        recordingVC.importedRecord = importedRecord
-        
-        let navigationController = UINavigationController()
-        navigationController.pushViewController(walkthroughVC, animated: false)
-        navigationController.pushViewController(recordingVC, animated: true)
-        window?.rootViewController = navigationController
+        let tabbar = TabBarController()
+        tabbar.importedRecords = importedRecord
+        window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
     }
     

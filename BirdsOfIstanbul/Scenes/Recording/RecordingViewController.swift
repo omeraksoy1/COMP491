@@ -58,7 +58,7 @@ class RecordingViewController: BaseViewController {
             recordList.append(importedRecord)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setRecordingState()
@@ -66,6 +66,7 @@ class RecordingViewController: BaseViewController {
         setRecordListTableView()
         configureAudioSpectrumView()
         configureStopRecordingButton()
+        navigationController?.navigationItem.hidesBackButton = true
     }
     
     private func setRecordingState() {
@@ -75,7 +76,7 @@ class RecordingViewController: BaseViewController {
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
-                    recordingButton.isEnabled = allowed
+                    self.recordingButton.isEnabled = allowed
                 }
             }
         } catch {
@@ -192,31 +193,16 @@ class RecordingViewController: BaseViewController {
             self?.hideLoading()
             
             if error == nil {
-                self?.presentAlert(title: "Success", message: "Uploaded successfully.", buttonTitle: "OK")
+                let formViewController = FormViewController()
+                formViewController.childName = childName
+                formViewController.storage = storage
+                formViewController.latitude = self?.userLocation.coordinate.latitude
+                formViewController.longitude = self?.userLocation.coordinate.longitude
+                self?.navigationController?.pushViewController(formViewController, animated: true)
             }
             else {
                 self?.presentAlert(title: "Error", message: "An error occurred while uploading to the server. Please try again.", buttonTitle: "OK")
             }
-        }
-        
-        
-        let pathReference = storage.reference(withPath: childName)
-        //var downloadURL: URL?
-        
-        pathReference.downloadURL { downloadUrl, error in
-            if error != nil {
-              print(error) // throw error and cancel operation
-          } else {
-              if self.auth.currentUser?.uid != nil {
-                  self.db.collection(self.auth.currentUser!.uid).addDocument(data: ["location" :
-                                                                                        ["Latitude" : self.userLocation.coordinate.latitude,
-                                                                                         "Longitude" : self.userLocation.coordinate.longitude],
-                                                                                    "time" : String().getCurrentTime(),
-                                                                                    "audioURL" : downloadUrl!.absoluteString])
-              } else {
-                  return // implement some error popup
-              }
-          }
         }
     }
     

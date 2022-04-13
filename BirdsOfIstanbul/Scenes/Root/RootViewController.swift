@@ -14,8 +14,8 @@ class RootViewController: BaseViewController {
         super.viewDidLoad()
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             if user != nil {
-                let walkthrough = WalkthroughViewController()
-                self?.navigationController?.pushViewController(walkthrough, animated: true)
+                let tabbar = TabBarController()
+                self?.navigationController?.pushViewController(tabbar, animated: true)
             } else {
                 let loginView = LoginView()
                 let viewController = UIHostingController(rootView: loginView)
