@@ -2,17 +2,20 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube link displaying most of the features of current version. (v0.3-0.4)
+YouTube link displaying most of the features of current version. (v0.5-0.6)
 
-https://www.youtube.com/watch?v=xZuZ-0dG8Jg
+https://www.youtube.com/shorts/Gtx--gvtut8
 
-https://www.youtube.com/shorts/3Dd0gfvptX0
+
+https://www.youtube.com/shorts/stwxeuyRKKI
 
 Newly added features:
-1) Login and Sign up features.
-2) Google Firebase authentication integration.
-3) Sign out button.
-4) The issue of automatically logging out once the app is closed is solved now.
+1) Account page
+2) Change password feature.
+3) Footer.
+4) Form 1 and Form 2 before the upload and after the prediction.
+5) Dummy prediction page.
+6) Minor UI changes.
 
 Previously added features:
 1) Sound recording.
@@ -27,3 +30,7 @@ Previously added features:
 10) Being able to share sounds on iOS files /anywhere on the phone (including VoiceMemos) with our application.
 11) Being able to upload local files that are shared with our application to our backend.
 12) Being able to play local files that are shared with our application through our sound player.
+13) Login and Sign up features.
+14) Google Firebase authentication integration.
+15) Sign out button.
+16) The issue of automatically logging out once the app is closed is solved now.
