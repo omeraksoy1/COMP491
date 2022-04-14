@@ -67,10 +67,10 @@ struct ExploreBirdsView: View {
     }
 }
 
-/*
+
 struct ExploreBirdsView_Previews: PreviewProvider {
     static var previews: some View {
         ExploreBirdsView()
     }
 }
-*/
+

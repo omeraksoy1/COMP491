@@ -20,7 +20,10 @@ struct BirdPopupView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 Text(bird.description).font(.caption)
             })
+            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+            
             Link("Read more on Wikipedia", destination: URL(string: bird.link)!)
+                .padding(.bottom)
         }
     }
 }
