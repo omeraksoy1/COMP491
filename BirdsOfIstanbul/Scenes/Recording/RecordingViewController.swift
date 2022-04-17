@@ -144,6 +144,7 @@ class RecordingViewController: BaseViewController {
         recordList.append(record)
         audioRecorder.stop()
         audioRecorder = nil
+        self.audioSpectrogram.rawAudioData = []
     }
     
     private func configureStopRecordingButton() {
@@ -154,14 +155,22 @@ class RecordingViewController: BaseViewController {
     
     private func playSelectedRecording() {
         isButtonsDeactivated(value: true)
-        audioSpectrumView.isHidden = false
+        //audioSpectrumView.isHidden = false
         let resourceName = recordList.filter { $0.path == recordingSelected?.path }.first?.path
         guard let resource = resourceName,
               let url = URL(string: resource) else { return }
         do {
+            let rawAudio = DataLoader.loadAudioSamplesArrayOf(Float.self, atUrl: url)
+            var intRawAudio = [Int16]()
+            for data in rawAudio! {
+                intRawAudio.append(Int16(data))
+            }
+            audioSpectrogram.rawAudioData = intRawAudio
+            audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
             player.prepareToPlay()
             player.delegate = self
+            audioSpectrogram.isHidden = false
             player.play()
         } catch {
             presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
@@ -230,6 +239,8 @@ extension RecordingViewController: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             recordListTableView.isUserInteractionEnabled = true
+            audioSpectrogram.rawAudioData = []
+            audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
         }
     }
 }
@@ -253,6 +264,7 @@ extension RecordingViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = recordListTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = recordList[indexPath.row].title
         cell.textLabel?.textAlignment = .center
+        
         return cell
     }
     
@@ -267,5 +279,7 @@ extension RecordingViewController: AVAudioPlayerDelegate {
         recordListTableView.isUserInteractionEnabled = true
         configureAudioSpectrumView()
         player.stop()
+        audioSpectrogram.rawAudioData = []
+        audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
     }
 }
