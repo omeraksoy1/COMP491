@@ -16,6 +16,7 @@ typealias Record = (path: String, title: String, dataKey: String)
 class RecordingViewController: BaseViewController {
     
     @IBOutlet private weak var audioSpectrumView: WaveView!
+    var audioSpectrogram = AudioSpectrogram()
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var recordingButton: UIButton!
     @IBOutlet private weak var playButton: UIButton!
@@ -60,6 +61,11 @@ class RecordingViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        audioSpectrogram = AudioSpectrogram()
+        audioSpectrogram.contentsGravity = .resize
+        view.layer.addSublayer(audioSpectrogram)
+
+        view.backgroundColor = .black
         setRecordingState()
         setLocationManager()
         setRecordListTableView()
@@ -111,6 +117,8 @@ class RecordingViewController: BaseViewController {
         ]
         
         do {
+            self.audioSpectrogram.isHidden = false
+            audioSpectrogram.startRunning()
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
@@ -132,6 +140,8 @@ class RecordingViewController: BaseViewController {
             self.stopRecordButton.isHidden = true
             self.recordingButton.isEnabled = true
             self.audioSpectrumView.isHidden = true
+            self.audioSpectrogram.stopRunning()
+            self.audioSpectrogram.isHidden = true
         }
         let fileName = "\(userLocation.coordinate.latitude):\(userLocation.coordinate.longitude).wav"
         let record = Record(
@@ -222,6 +232,9 @@ class RecordingViewController: BaseViewController {
     
     @IBAction func didTappedShareButton(_ sender: Any) {
         uploadSelectedSoundFile()
+    }
+    override func viewDidLayoutSubviews() {
+            audioSpectrogram.frame = audioSpectrumView.frame
     }
 }
 
