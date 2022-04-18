@@ -288,13 +288,10 @@
 				63F8807F27D28646006B1F7C /* RecordingViewController.swift */,
 				63F8808027D28646006B1F7C /* RecordingViewController.xib */,
 				63F8808A27D2C55E006B1F7C /* WaveView.swift */,
-<<<<<<< HEAD
 				14B8798027F0DC14006AC19E /* NewRecordingViewController.swift */,
 				14B8798227F0E8A1006AC19E /* AudioSpectrogram.swift */,
 				14B8798427F1220D006AC19E /* SpectrogramView.swift */,
 				145C7B9428062D4D00EA064C /* DataLoader.swift */,
-=======
->>>>>>> parent of 88e6e51 (First commit for spectrogram.)
 			);
 			path = Recording;
 			sourceTree = "<group>";
