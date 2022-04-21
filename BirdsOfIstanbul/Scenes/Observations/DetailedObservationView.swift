@@ -12,13 +12,33 @@ struct DetailedObservationView: View {
     var observation: Observation
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Spectrogram")
+                    .padding()
+                
+                Spacer()
+                
+                Text("Play button")
+                
+                Spacer()
+                
+                Text("Map")
+                
+                Spacer()
+                
+            }
+                
+            .navigationTitle(observation.name)
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
-/*
+
 struct DetailedObservationView_Previews: PreviewProvider {
+    static var observation: Observation  = Observation(name: "name", location: "location", timestamp: "timestamp", prediction: "prediction")
     static var previews: some View {
-        DetailedObservationView(observation: currentObservation)
+        DetailedObservationView(observation: observation)
     }
 }
-*/
+

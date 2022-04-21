@@ -23,6 +23,10 @@ var tempObservations: [Observation] = []
 func loadObservations() -> [Observation] {
     tempObservations.append(Observation(name: "test obs", location: "test location",
                                         timestamp: "10 a.m.", prediction: "Eurasian Siskin"))
+    tempObservations.append(Observation(name: "test obs 2", location: "test location 2",
+                                        timestamp: "10 a.m.", prediction: "Eurasian Siskin"))
+    tempObservations.append(Observation(name: "test obs 3", location: "test location 3",
+                                        timestamp: "10 a.m.", prediction: "Eurasian Siskin"))
     
     return tempObservations
     

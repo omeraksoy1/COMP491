@@ -24,6 +24,7 @@ struct ObservationRowView: View, Identifiable {
                 VStack {
                     Text(observation.name)
                         .fontWeight(.bold)
+                    Spacer()
                     Text(observation.location)
                         .font(.caption)
                 }
@@ -37,7 +38,7 @@ struct ObservationRowView: View, Identifiable {
                     .padding(.trailing)
                 
             }
-            .padding(.leading)
+            .padding()
         }
     }
 }
@@ -47,5 +48,5 @@ struct ObservationRowView_Previews: PreviewProvider {
     static var previews: some View {
         ObservationRowView()
     }
-}
-*/
+}*/
+
