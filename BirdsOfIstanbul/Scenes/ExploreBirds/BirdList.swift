@@ -29,7 +29,7 @@ func loadBirds() -> [Bird] {
                          link: birdLinks[index])) // array of links in the same order.
     }
     
-    return temp
+    return temp.sorted(by: { $0.name.lowercased() < $1.name.lowercased() })
     
 }
 

@@ -28,7 +28,7 @@ struct BirdRowView: View, Identifiable {
                     Text(bird.description)
                         .font(.caption)
                         .lineLimit(2)
-                        .multilineTextAlignment(.center)
+                        //.multilineTextAlignment(.center)
                 })
                     .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
                 
