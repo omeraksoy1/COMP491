@@ -31,8 +31,7 @@ class TabBarController: UITabBarController {
     
     func createObservationsNC() -> UINavigationController {
         //let vc = ObservationsViewController()
-        let observationsView = ObservationsView()
-        let vc = UIHostingController(rootView: observationsView)
+        let vc = ObservationsViewController()
         vc.tabBarItem = UITabBarItem(title: "Observation", image: UIImage(named: "observation")?.resizeImage(targetSize: CGSize(width: 25, height: 25)), tag: 1)
         return UINavigationController(rootViewController: vc)
     }

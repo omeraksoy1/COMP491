@@ -13,6 +13,7 @@ import FirebaseStorage
 import FirebaseAuth
 
 typealias Record = (path: String, title: String, dataKey: String)
+typealias RecordPin = (lat: Double, long: Double, downloadURL: String, stamp: String)
 
 class RecordingViewController: BaseViewController {
     
@@ -60,13 +61,29 @@ class RecordingViewController: BaseViewController {
         }
     }
     
+    func addNewRecording(record: RecordPin?) {
+        if let record = record {
+            let storage = Storage.storage()
+            let storageRef = storage.reference(forURL: record.downloadURL)
+            let localURL = FileManager.default.temporaryDirectory.appendingPathComponent("\(record.stamp).wav")
+            storageRef.write(toFile: localURL) { url, error in
+                if error != nil {
+                    return
+                } else {
+                    let newRecord = Record(path: url!.absoluteString, title: record.stamp , dataKey: "String")
+                    self.recordList.append(newRecord)
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         audioSpectrogram = AudioSpectrogram()
         audioSpectrogram.contentsGravity = .resize
         view.layer.addSublayer(audioSpectrogram)
 
-        view.backgroundColor = .black
+//        view.backgroundColor = .black
         setRecordingState()
         setLocationManager()
         setRecordListTableView()

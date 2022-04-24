@@ -308,13 +308,14 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
                                                      for: .audio,
                                                      position: .unspecified),
             let microphoneInput = try? AVCaptureDeviceInput(device: microphone) else {
-                  fatalError("Can't create microphone.")
+//                  fatalError("Can't create microphone.")
+            return
         }
-        
+
         if captureSession.canAddInput(microphoneInput) {
             captureSession.addInput(microphoneInput)
         }
-        
+
         captureSession.commitConfiguration()
     }
     
