@@ -2,20 +2,15 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube link displaying most of the features of current version. (v0.5-0.6)
+YouTube link displaying most of the features of current version. (v0.7)
 
-https://www.youtube.com/shorts/Gtx--gvtut8
-
-
-https://www.youtube.com/shorts/stwxeuyRKKI
+https://www.youtube.com/shorts/_y36X8qySCA
 
 Newly added features:
-1) Account page
-2) Change password feature.
-3) Footer.
-4) Form 1 and Form 2 before the upload and after the prediction.
-5) Dummy prediction page.
-6) Minor UI changes.
+
+1) Observations page shows prior recordings on a map as pins.
+2) Users can listen to what they have recorded at the pin's location. (the sound file automatically gets downloaded when the user clicks on "+" icon.)
+3) For ease of use the map gets centered at the average of the locations of the pin's longitude and latitude. (I added this because if the user is in Turkey and if they have recorded sounds in the US, they won't have to scroll through the entire world map to find their pins.)
 
 Previously added features:
 1) Sound recording.
@@ -34,3 +29,9 @@ Previously added features:
 14) Google Firebase authentication integration.
 15) Sign out button.
 16) The issue of automatically logging out once the app is closed is solved now.
+17) Account page
+18) Change password feature.
+19) Footer.
+20) Form 1 and Form 2 before the upload and after the prediction.
+21) Dummy prediction page.
+22) Minor UI changes.
