@@ -24,8 +24,7 @@ struct ObservationRowView: View, Identifiable {
                 VStack {
                     Text(observation.name)
                         .fontWeight(.bold)
-                    Spacer()
-                    Text(observation.location)
+                    Text(observation.location[0] + " " + observation.location[1])
                         .font(.caption)
                 }
                 .frame(maxWidth: 300, maxHeight: 100, alignment: .leading)
