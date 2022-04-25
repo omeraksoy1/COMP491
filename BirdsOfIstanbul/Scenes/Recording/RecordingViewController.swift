@@ -65,7 +65,7 @@ class RecordingViewController: BaseViewController {
         audioSpectrogram.contentsGravity = .resize
         view.layer.addSublayer(audioSpectrogram)
 
-        view.backgroundColor = .black
+        //view.backgroundColor = .black
         setRecordingState()
         setLocationManager()
         setRecordListTableView()
