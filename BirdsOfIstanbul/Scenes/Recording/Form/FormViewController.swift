@@ -22,7 +22,7 @@ class FormViewController: BaseViewController {
             continueButton.isEnabled = isButtonEnabled
         }
     }
-    let answers = ["a) on the ground" ,"b) in a lake" ,"c) in city (what do you mean by this? see f, g below)", "d) on a tree", "e) behind/in a bush", "f) on a building (windows, balcony etc.)", "g) on a street light or an electric pole)", "h) other", "i) cannot see / do not know"]
+    let answers = ["a) on the ground" ,"b) in a lake" ,"d) on a tree", "e) behind/in a bush", "f) on a building (windows, balcony etc.)", "g) on a street light or an electric pole)", "h) other", "i) cannot see / do not know"]
     
     var storage: Storage?
     var childName: String?
