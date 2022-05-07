@@ -24,7 +24,7 @@ func loadBirds() -> [Bird] {
     
     for (index, birdName) in birdNames.enumerated() {
         temp.append(Bird(name: birdName, description: birdDescs[index], // array of descriptions in the same order
-                         image: birdName.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "'", with: ""),
+                         image: birdName.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "'", with: "").replacingOccurrences(of: "-", with: ""),
                          // remove apostrophes and whitespace
                          link: birdLinks[index])) // array of links in the same order.
     }
