@@ -6,6 +6,7 @@ YouTube link displaying most of the features of current version. (v0.8.1-v0.8.2-
 
 https://www.youtube.com/shorts/NLRSZsKRewc (larger spectrogram)
 https://www.youtube.com/shorts/o6RUhEp1GMQ (mp3 support)
+
 https://www.youtube.com/watch?v=78gjvp06ERA (m4a support)
 
 Newly added features:
