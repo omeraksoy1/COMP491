@@ -2,9 +2,10 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube link displaying most of the features of current version. (v0.8.1-v0.8.2-v0.8.3)
+YouTube links displaying most of the features of current version. (v0.8.1-v0.8.2-v0.8.3)
 
 https://www.youtube.com/shorts/NLRSZsKRewc (larger spectrogram)
+
 https://www.youtube.com/shorts/o6RUhEp1GMQ (mp3 support)
 
 https://www.youtube.com/watch?v=78gjvp06ERA (m4a support)
