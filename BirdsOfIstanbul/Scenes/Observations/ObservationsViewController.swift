@@ -20,10 +20,14 @@ class ObservationsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         Task {
             await downloadData()
         }
-        // Do any additional setup after loading the view.
     }
     
     func configureMapview() {
@@ -66,7 +70,6 @@ class ObservationsViewController: BaseViewController {
         }
         
         for document in documents {
-            
             guard let downloadURL = document.get("audioURL") as? String,
                   let timestamp = document.get("time") as? String,
                   let location = document.get("location") as? [String: Any],
@@ -75,8 +78,8 @@ class ObservationsViewController: BaseViewController {
             let record = RecordPin(lat: lat, long: long, downloadURL: downloadURL, stamp: timestamp)
             records.append(record)
         }
+        self.hideLoading()
         configureMapview()
-        hideLoading()
     }
 }
 

@@ -17,17 +17,18 @@ typealias RecordPin = (lat: Double, long: Double, downloadURL: String, stamp: St
 
 class RecordingViewController: BaseViewController {
     
-    @IBOutlet private weak var audioSpectrumView: WaveView!
+    @IBOutlet private weak var audioSpectrumView: UIView!
     var audioSpectrogram = AudioSpectrogram()
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var recordingButton: UIButton!
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var stopRecordButton: UIButton!
-    @IBOutlet private weak var recordListTableView: UITableView!
+    @IBOutlet weak var recordListTableView: UITableView!
     
     var importedRecord: Record?
-    private var recordList: [Record] = [] {
+    
+    var recordList: [Record] = [] {
         didSet {
             recordListTableView.reloadData()
             recordListTableView.scrollToRow(at: IndexPath(row: recordList.count - 1, section: 0), at: .bottom, animated: true)
@@ -60,7 +61,7 @@ class RecordingViewController: BaseViewController {
             recordList.append(importedRecord)
         }
     }
-    
+//
     func addNewRecording(record: RecordPin?) {
         if let record = record {
             let storage = Storage.storage()
@@ -83,11 +84,9 @@ class RecordingViewController: BaseViewController {
         audioSpectrogram.contentsGravity = .resize
         view.layer.addSublayer(audioSpectrogram)
 
-//        view.backgroundColor = .black
         setRecordingState()
         setLocationManager()
         setRecordListTableView()
-        configureAudioSpectrumView()
         configureStopRecordingButton()
         navigationController?.navigationItem.hidesBackButton = true
     }
@@ -119,11 +118,11 @@ class RecordingViewController: BaseViewController {
         recordListTableView.allowsMultipleSelection = false
     }
     
-    private func configureAudioSpectrumView() {
-        audioSpectrumView.animationStart(direction: .right, speed: 5)
-        audioSpectrumView.clipsToBounds = true
-        audioSpectrumView.isHidden = true
-    }
+//    private func configureAudioSpectrumView() {
+//        audioSpectrumView.animationStart(direction: .right, speed: 5)
+//        audioSpectrumView.clipsToBounds = true
+//        audioSpectrumView.isHidden = true
+//    }
     
     private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("\(userLocation.coordinate.latitude):\(userLocation.coordinate.longitude).wav")
@@ -252,7 +251,7 @@ class RecordingViewController: BaseViewController {
     }
     
     @IBAction func didTappedPlayButton(_ sender: UITableViewCell) {
-        audioSpectrumView.animationStart(direction: .right, speed: 5, preferredColor: .systemGreen)
+//        audioSpectrumView.animationStart(direction: .right, speed: 5, preferredColor: .systemGreen)
         recordListTableView.isUserInteractionEnabled = false
         playSelectedRecording()
     }
@@ -307,7 +306,7 @@ extension RecordingViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isButtonsDeactivated(value: false)
         recordListTableView.isUserInteractionEnabled = true
-        configureAudioSpectrumView()
+//        configureAudioSpectrumView()
         player.stop()
         audioSpectrogram.rawAudioData = []
         audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)

@@ -26,15 +26,19 @@ class BaseViewController: UIViewController {
     }
     
     func showLoading() {
-        if !(navigationController?.visibleViewController is LoadingViewController) {
-            let loadingViewController = LoadingViewController.instantiateToPresent()
-            navigationController?.present(loadingViewController, animated: false)
+        DispatchQueue.main.async {
+            if !(self.navigationController?.visibleViewController is LoadingViewController) {
+                let loadingViewController = LoadingViewController.instantiateToPresent()
+                self.navigationController?.present(loadingViewController, animated: false)
+            }
         }
     }
     
     func hideLoading() {
-        if (navigationController?.visibleViewController is LoadingViewController) {
-            navigationController?.dismiss(animated: false, completion: nil)
+        DispatchQueue.main.async {
+            if (self.navigationController?.visibleViewController is LoadingViewController) {
+                self.navigationController?.dismiss(animated: false, completion: nil)
+            }
         }
     }
     

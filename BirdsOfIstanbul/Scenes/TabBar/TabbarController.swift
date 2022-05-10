@@ -9,11 +9,17 @@ import UIKit
 import SwiftUI
 
 class TabBarController: UITabBarController {
-    
-    var importedRecords: Record?
+    let recordVC = RecordingViewController()
+    var importedRecords: Record? {
+        didSet {
+            guard importedRecords != nil else { return }
+            recordVC.importedRecord = importedRecords
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barStyle = .default
         tabBar.tintColor = .systemGreen
         tabBar.barTintColor = .white
         tabBar.shadowImage = UIImage()
@@ -24,9 +30,9 @@ class TabBarController: UITabBarController {
     }
     
     func createRecordNC() -> UINavigationController {
-        let vc = RecordingViewController()
-        vc.tabBarItem = UITabBarItem(title: "Recording", image: UIImage(named: "record")?.resizeImage(targetSize: CGSize(width: 28, height: 28)), tag: 0)
-        return UINavigationController(rootViewController: vc)
+        recordVC.tabBarItem = UITabBarItem(title: "Recording", image: UIImage(named: "record")?.resizeImage(targetSize: CGSize(width: 28, height: 28)), tag: 0)
+        recordVC.importedRecord = importedRecords
+        return UINavigationController(rootViewController: recordVC)
     }
     
     func createObservationsNC() -> UINavigationController {
