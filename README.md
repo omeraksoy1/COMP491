@@ -2,15 +2,19 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube link displaying most of the features of current version. (v0.7)
+YouTube links displaying most of the features of current version. (v0.8.1-v0.8.2-v0.8.3)
 
-https://www.youtube.com/shorts/_y36X8qySCA
+https://www.youtube.com/shorts/NLRSZsKRewc (larger spectrogram)
+
+https://www.youtube.com/shorts/o6RUhEp1GMQ (mp3 support)
+
+https://www.youtube.com/watch?v=78gjvp06ERA (m4a support)
 
 Newly added features:
 
-1) Observations page shows prior recordings on a map as pins.
-2) Users can listen to what they have recorded at the pin's location. (the sound file automatically gets downloaded when the user clicks on "+" icon.)
-3) For ease of use the map gets centered at the average of the locations of the pin's longitude and latitude. (I added this because if the user is in Turkey and if they have recorded sounds in the US, they won't have to scroll through the entire world map to find their pins.)
+1) Improved recording page and reduced whitespace by enlarging the spectrogram.
+2) The app now supports mp3 and m4a for sharing external files.
+3) Fixed bugs and removed redundant code from the recording page.
 
 Previously added features:
 1) Sound recording.
@@ -35,3 +39,6 @@ Previously added features:
 20) Form 1 and Form 2 before the upload and after the prediction.
 21) Dummy prediction page.
 22) Minor UI changes.
+23) Observations page shows prior recordings on a map as pins.
+24) Users can listen to what they have recorded at the pin's location. (the sound file automatically gets downloaded when the user clicks on "+" icon.)
+25) For ease of use the map gets centered at the average of the locations of the pin's longitude and latitude. (I added this because if the user is in Turkey and if they have recorded sounds in the US, they won't have to scroll through the entire world map to find their pins.)

@@ -65,8 +65,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func handleURL(url: URL) {
         let outputURL = getDirectory().appendingPathComponent("\(String().getCurrentTime()).wav")
+        url.startAccessingSecurityScopedResource()
         convertAudio(url, outputURL: outputURL)
-        
         
         let importedRecord = Record(
             path: outputURL.absoluteString,
@@ -96,7 +96,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var dstFormat : AudioStreamBasicDescription = AudioStreamBasicDescription()
 
         ExtAudioFileOpenURL(url as CFURL, &sourceFile)
-
         var thePropertySize: UInt32 = UInt32(MemoryLayout.stride(ofValue: srcFormat))
 
         ExtAudioFileGetProperty(sourceFile!,
