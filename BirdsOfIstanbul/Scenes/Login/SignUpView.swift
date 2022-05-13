@@ -78,7 +78,7 @@ struct SignUpView: View {
                     .animation(.none, value: 0)
             }
             
-            
+            Spacer()
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
             .toast(isPresenting: $showAlert, duration: 2) {

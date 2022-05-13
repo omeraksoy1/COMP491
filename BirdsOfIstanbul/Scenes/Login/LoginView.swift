@@ -71,7 +71,7 @@ struct LoginView: View {
                 NavigationLink("Sign up", destination: SignUpView())
                     .foregroundColor(.blue)
             }
-            
+            Spacer()
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
             .toast(isPresenting: $showAlert, duration: 2) {

@@ -26,6 +26,7 @@ class TabBarController: UITabBarController {
         tabBar.backgroundImage = UIImage()
         tabBar.backgroundColor = .white
         navigationItem.hidesBackButton = true
+        tabBar.frame.size.height = 40
         viewControllers = [createRecordNC(), createObservationsNC(), createExploreNC(), createAccountNC()]
     }
     
