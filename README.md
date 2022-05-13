@@ -12,9 +12,9 @@ https://www.youtube.com/watch?v=78gjvp06ERA (m4a support)
 
 Newly added features:
 
-1) Improved recording page and reduced whitespace by enlarging the spectrogram.
-2) The app now supports mp3 and m4a for sharing external files.
-3) Fixed bugs and removed redundant code from the recording page.
+1) Filled up account page to include some statistics on the user.
+2) Added a Credits button to the account page.
+3) Minor UI improvements
 
 Previously added features:
 1) Sound recording.
@@ -42,3 +42,6 @@ Previously added features:
 23) Observations page shows prior recordings on a map as pins.
 24) Users can listen to what they have recorded at the pin's location. (the sound file automatically gets downloaded when the user clicks on "+" icon.)
 25) For ease of use the map gets centered at the average of the locations of the pin's longitude and latitude. (I added this because if the user is in Turkey and if they have recorded sounds in the US, they won't have to scroll through the entire world map to find their pins.)
+26) Improved recording page and reduced whitespace by enlarging the spectrogram.
+27) The app now supports mp3 and m4a for sharing external files.
+28) Fixed bugs and removed redundant code from the recording page.
