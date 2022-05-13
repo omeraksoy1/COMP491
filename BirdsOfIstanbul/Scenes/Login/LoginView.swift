@@ -23,7 +23,16 @@ struct LoginView: View {
     
     var body: some View {
         VStack (spacing: 15) {
-            Spacer()
+    
+            Image("iconBird")
+                .resizable()
+                .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200, alignment: .center)
+                .padding(.all)
+            
+            Text("Birds Of Istanbul")
+                .font(.system(size: 30, weight: .bold, design: .monospaced))
+                .padding(.bottom)
+            
             HStack {
                 Image(systemName: "envelope")
                     .foregroundColor(.gray)
@@ -71,7 +80,7 @@ struct LoginView: View {
                 NavigationLink("Sign up", destination: SignUpView())
                     .foregroundColor(.blue)
             }
-            Spacer()
+
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
             .toast(isPresenting: $showAlert, duration: 2) {
