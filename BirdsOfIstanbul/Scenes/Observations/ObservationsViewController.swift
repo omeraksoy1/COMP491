@@ -43,7 +43,9 @@ class ObservationsViewController: BaseViewController {
             mapView.addAnnotation(pin)
         }
         let initialLocation = CLLocationCoordinate2D(latitude: getAverage(nums: latArray), longitude: getAverage(nums: longArray))
-        mapView.setCenter(initialLocation, animated: true)
+        if !latArray.isEmpty && !longArray.isEmpty {
+            mapView.setCenter(initialLocation, animated: true)
+        }
     }
     
     func getAverage(nums: [Double]) -> Double {
