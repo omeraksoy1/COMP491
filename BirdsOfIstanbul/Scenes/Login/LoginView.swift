@@ -26,7 +26,7 @@ struct LoginView: View {
     
             Image("iconBird")
                 .resizable()
-                .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200, alignment: .center)
+                .frame(minWidth: 200, idealWidth: 200, maxWidth: 200, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .center)
                 .padding(.all)
             
             Text("Birds Of Istanbul")

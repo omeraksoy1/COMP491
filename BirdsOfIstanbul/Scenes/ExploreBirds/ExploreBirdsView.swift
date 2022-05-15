@@ -40,7 +40,7 @@ struct ExploreBirdsView: View {
                 .frame(width: 360, height: 45)
                 .background(Color.primary.opacity(0.08))
                 .cornerRadius(10)
-                .padding()
+                .padding(.bottom)
                 
                 HStack {
                     Rectangle()
@@ -48,7 +48,7 @@ struct ExploreBirdsView: View {
                         .frame(height: 1)
                     
                 }
-                .padding()
+                
                 
             }
             
