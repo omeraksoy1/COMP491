@@ -30,6 +30,14 @@ class TabBarController: UITabBarController {
         viewControllers = [createRecordNC(), createObservationsNC(), createExploreNC(), createAccountNC()]
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func createRecordNC() -> UINavigationController {
         recordVC.tabBarItem = UITabBarItem(title: "Recording", image: UIImage(named: "record")?.resizeImage(targetSize: CGSize(width: 28, height: 28)), tag: 0)
         recordVC.importedRecord = importedRecords
