@@ -23,7 +23,17 @@ struct SignUpView: View {
     
     var body: some View {
         VStack (spacing: 15) {
-            Spacer()
+            
+            Image("iconBird")
+                .resizable()
+                .frame(minWidth: 200, idealWidth: 200, maxWidth: 200, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .center)
+                .padding(.all)
+                .padding(.top, 30)
+            
+            Text("Birds Of Istanbul")
+                .font(.system(size: 30, weight: .bold, design: .monospaced))
+                .padding(.bottom)
+            
             HStack {
                 Image(systemName: "envelope")
                     .foregroundColor(.gray)
@@ -64,10 +74,8 @@ struct SignUpView: View {
                 .cornerRadius(8)
                 .disabled(!signupProcess && !email.isEmpty && !password.isEmpty ? false : true)
             
-            
             /*NavigationLink(destination: WalkthroughUIViewController().navigationBarBackButtonHidden(true), isActive: $signupSuccess) {
             }.disabled(signupSuccess)*/
-            
             
             Spacer()
             
@@ -78,9 +86,9 @@ struct SignUpView: View {
                     .animation(.none, value: 0)
             }
             
-            Spacer()
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
             .toast(isPresenting: $showAlert, duration: 2) {
                 alert
             }

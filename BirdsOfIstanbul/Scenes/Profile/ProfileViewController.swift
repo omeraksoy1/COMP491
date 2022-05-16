@@ -32,7 +32,8 @@ class ProfileViewController: BaseViewController {
     var size: Double = 0 {
         didSet {
             DispatchQueue.main.async {
-                self.dataLabel.text = "You have \(self.documents?.count ?? 0 ) recordings which hold \(self.size / 1000000) MB space on our servers."
+                let rounded = Double(round(1000 * (self.size / 1000000)) / 1000)
+                self.dataLabel.text = "You have \(self.documents?.count ?? 0 ) recordings which hold \(rounded) MB space on our servers."
             }
         }
     }
