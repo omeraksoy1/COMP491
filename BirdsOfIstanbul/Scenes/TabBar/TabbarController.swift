@@ -9,13 +9,7 @@ import UIKit
 import SwiftUI
 
 class TabBarController: UITabBarController {
-    let recordVC = RecordingViewController()
-    var importedRecords: Record? {
-        didSet {
-            guard importedRecords != nil else { return }
-            recordVC.importedRecord = importedRecords
-        }
-    }
+    static var importedRecords: Record? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +33,12 @@ class TabBarController: UITabBarController {
     }
     
     func createRecordNC() -> UINavigationController {
+        let recordVC = RecordingViewController()
         recordVC.tabBarItem = UITabBarItem(title: "Recording", image: UIImage(named: "record")?.resizeImage(targetSize: CGSize(width: 28, height: 28)), tag: 0)
-        recordVC.importedRecord = importedRecords
         return UINavigationController(rootViewController: recordVC)
     }
     
     func createObservationsNC() -> UINavigationController {
-        //let vc = ObservationsViewController()
         let vc = ObservationsViewController()
         vc.tabBarItem = UITabBarItem(title: "Observation", image: UIImage(named: "observation")?.resizeImage(targetSize: CGSize(width: 25, height: 25)), tag: 1)
         return UINavigationController(rootViewController: vc)

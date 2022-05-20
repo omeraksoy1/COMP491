@@ -26,12 +26,12 @@ class RecordingViewController: BaseViewController {
     @IBOutlet private weak var stopRecordButton: UIButton!
     @IBOutlet weak var recordListTableView: UITableView!
     
-    var importedRecord: Record?
     
     var recordList: [Record] = [] {
         didSet {
-            recordListTableView.reloadData()
-            recordListTableView.scrollToRow(at: IndexPath(row: recordList.count - 1, section: 0), at: .bottom, animated: true)
+            self.recordListTableView.reloadData()
+//            self.recordListTableView.scrollToRow(at: IndexPath(row: self.recordList.count - 1, section: 0), at: .bottom, animated: true)
+            
         }
     }
     
@@ -57,11 +57,18 @@ class RecordingViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let importedRecord = importedRecord {
-            recordList.append(importedRecord)
+    }
+    
+    @objc func reloadData(_ notification: Notification?) {
+        
+        DispatchQueue.main.async {
+            if TabBarController.importedRecords != nil {
+                let new = TabBarController.importedRecords!
+                self.recordList.append(new)
+            }
         }
     }
-//
+    
     func addNewRecording(record: RecordPin?) {
         if let record = record {
             let storage = Storage.storage()
@@ -80,13 +87,14 @@ class RecordingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector:  #selector(self.reloadData(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+
         audioSpectrogram = AudioSpectrogram()
         audioSpectrogram.contentsGravity = .resize
         view.layer.addSublayer(audioSpectrogram)
-
+        setRecordListTableView()
         setRecordingState()
         setLocationManager()
-        setRecordListTableView()
         configureStopRecordingButton()
         navigationController?.navigationItem.hidesBackButton = true
     }
@@ -118,11 +126,9 @@ class RecordingViewController: BaseViewController {
         recordListTableView.allowsMultipleSelection = false
     }
     
-//    private func configureAudioSpectrumView() {
-//        audioSpectrumView.animationStart(direction: .right, speed: 5)
-//        audioSpectrumView.clipsToBounds = true
-//        audioSpectrumView.isHidden = true
-//    }
+    private func configureAudioSpectrumView() {
+        self.audioSpectrogram.isHidden = true
+    }
     
     private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("\(userLocation.coordinate.latitude):\(userLocation.coordinate.longitude).wav")
@@ -181,7 +187,7 @@ class RecordingViewController: BaseViewController {
     
     private func playSelectedRecording() {
         isButtonsDeactivated(value: true)
-        //audioSpectrumView.isHidden = false
+        audioSpectrumView.isHidden = false
         let resourceName = recordList.filter { $0.path == recordingSelected?.path }.first?.path
         guard let resource = resourceName,
               let url = URL(string: resource) else { return }
@@ -251,7 +257,6 @@ class RecordingViewController: BaseViewController {
     }
     
     @IBAction func didTappedPlayButton(_ sender: UITableViewCell) {
-//        audioSpectrumView.animationStart(direction: .right, speed: 5, preferredColor: .systemGreen)
         recordListTableView.isUserInteractionEnabled = false
         playSelectedRecording()
     }
@@ -260,7 +265,7 @@ class RecordingViewController: BaseViewController {
         uploadSelectedSoundFile()
     }
     override func viewDidLayoutSubviews() {
-            audioSpectrogram.frame = audioSpectrumView.frame
+        audioSpectrogram.frame = audioSpectrumView.frame
     }
 }
 
@@ -306,7 +311,9 @@ extension RecordingViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isButtonsDeactivated(value: false)
         recordListTableView.isUserInteractionEnabled = true
-//        configureAudioSpectrumView()
+        DispatchQueue.main.async {
+            self.configureAudioSpectrumView()
+        }
         player.stop()
         audioSpectrogram.rawAudioData = []
         audioSpectrogram.frequencyDomainValues = [Float](repeating: 0, count: AudioSpectrogram.bufferCount * AudioSpectrogram.sampleCount)
