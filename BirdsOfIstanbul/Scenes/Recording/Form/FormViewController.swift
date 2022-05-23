@@ -51,8 +51,10 @@ class FormViewController: BaseViewController {
         }
         
         for document in documents {
-            if ((document.get("time") as! String) == self.timestamp) {
-                audioURL = (document.get("audioURL") as! String)
+            guard let time = document.get("time") as? String,
+                  let url = document.get("audioURL") as? String else {return}
+            self.audioURL = url
+            if(time == self.timestamp) {
                 break
             }
         }
@@ -67,26 +69,28 @@ class FormViewController: BaseViewController {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        //while(audioURL == nil) {
-        //    continue
-        //}
-        self.audioURL = "https://firebasestorage.googleapis.com/v0/b/birdsofistanbul-d3c13.appspot.com/o/song3.wav?alt=media&token=7518f6b4-630a-4cad-971e-2ac46c49ff00"
+        //self.audioURL = "https://firebasestorage.googleapis.com/v0/b/birdsofistanbul-d3c13.appspot.com/o/song3.wav?alt=media&token=7518f6b4-630a-4cad-971e-2ac46c49ff00"
         
         let body: [String: AnyHashable] = [
             "url": self.audioURL!
         ]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        let data = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        print("Serialized JSON object")
+        request.httpBody = data
+        print("Setup HTTP body of request")
+        let task = URLSession.shared.dataTask(with: request) { data, r, error in
             guard let data = data, error == nil else {
                 exit(EXIT_FAILURE)
             }
             do {
+                print(r)
                 let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                //let response = try JSONSerialization.jsonObject(with: data)
                 guard let jsonResponse = response as? [String: Any] else {
                     print("Error while getting json object")
                     exit(EXIT_FAILURE)
                 }
+                print(jsonResponse)
                 self.classification = jsonResponse["result"] as! String
                 self.finishedClassification = true
                 
@@ -100,6 +104,7 @@ class FormViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        sleep(2)
         Task {
             await getURL()
             classify()
@@ -127,7 +132,6 @@ class FormViewController: BaseViewController {
         classification = "Yellowhammer"
         var bird: Bird? = nil
         for b in loadBirds() {
-            print(b)
             if b.name == classification {
                 bird = b
                 break
