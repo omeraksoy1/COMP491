@@ -10,6 +10,7 @@ import MapKit
 import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
+import SwiftUI
 
 class FormViewController: BaseViewController {
     
@@ -28,8 +29,82 @@ class FormViewController: BaseViewController {
     var childName: String?
     var longitude: CLLocationDegrees?
     var latitude: CLLocationDegrees?
+    var timestamp: String?
     
     var selectedCell: QuestionTableViewCell?
+    
+    private var finishedClassification = false
+    private var classification = ""
+    
+    private var audioURL: String?
+    
+    func getURL() async {
+        let auth = Auth.auth()
+        let db = Firestore.firestore()
+        var documents: [QueryDocumentSnapshot] = []
+        
+        do {
+            let snapshot = try await db.collection(auth.currentUser!.uid).getDocuments()
+            documents = snapshot.documents
+        } catch {
+            print("There was an error")
+        }
+        
+        for document in documents {
+            if ((document.get("time") as! String) == self.timestamp) {
+                audioURL = (document.get("audioURL") as! String)
+                break
+            }
+        }
+    }
+    
+    func classify(){
+        guard let url = URL(string: "https://europe-central2-comp491-model.cloudfunctions.net/ast_model") else {
+            exit(EXIT_FAILURE)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        //while(audioURL == nil) {
+        //    continue
+        //}
+        self.audioURL = "https://firebasestorage.googleapis.com/v0/b/birdsofistanbul-d3c13.appspot.com/o/song3.wav?alt=media&token=7518f6b4-630a-4cad-971e-2ac46c49ff00"
+        
+        let body: [String: AnyHashable] = [
+            "url": self.audioURL!
+        ]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                exit(EXIT_FAILURE)
+            }
+            do {
+                let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                guard let jsonResponse = response as? [String: Any] else {
+                    print("Error while getting json object")
+                    exit(EXIT_FAILURE)
+                }
+                self.classification = jsonResponse["result"] as! String
+                self.finishedClassification = true
+                
+            }
+            catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Task {
+            await getURL()
+            classify()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +115,28 @@ class FormViewController: BaseViewController {
         questionsTableView.register(UINib(nibName: "QuestionTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionTableViewCell")
         questionsTableView.allowsMultipleSelection = false
         questionsTableView.reloadData()
+    }
+    
+    func waitForFinish() {
+        while(finishedClassification == false) {
+            continue
+        }
+        if classification == "" {
+            print("Classification error")
+        }
+        classification = "Yellowhammer"
+        var bird: Bird? = nil
+        for b in loadBirds() {
+            print(b)
+            if b.name == classification {
+                bird = b
+                break
+            }
+        }
+        print(classification)
+        let birdPopupView = BirdPopupView(bird: bird!)
+        let vc = UIHostingController(rootView: birdPopupView)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
@@ -73,8 +170,10 @@ class FormViewController: BaseViewController {
                                                                             "place": birdPlace])
                     self.hideLoading()
                     
-                    let prediction = PredictionViewController()
-                    self.navigationController?.pushViewController(prediction, animated: true)
+                    self.waitForFinish()
+                    
+                    //let prediction = PredictionViewController()
+                    //self.navigationController?.pushViewController(prediction, animated: true)
                 } else {
                     return
                 }
