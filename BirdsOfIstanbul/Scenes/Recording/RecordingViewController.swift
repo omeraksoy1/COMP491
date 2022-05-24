@@ -8,9 +8,9 @@
 import UIKit
 import AVFoundation
 import MapKit
-import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
+import FirebaseFirestore
 
 typealias Record = (path: String, title: String, dataKey: String)
 typealias RecordPin = (lat: Double, long: Double, downloadURL: String, stamp: String)
@@ -144,7 +144,7 @@ class RecordingViewController: BaseViewController {
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatLinearPCM),
-            AVSampleRateKey: 44100,
+            AVSampleRateKey: 16000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
@@ -248,6 +248,7 @@ class RecordingViewController: BaseViewController {
                 formViewController.storage = storage
                 formViewController.latitude = self?.userLocation.coordinate.latitude
                 formViewController.longitude = self?.userLocation.coordinate.longitude
+                formViewController.timestamp = self?.recordList.last?.title
                 self?.navigationController?.pushViewController(formViewController, animated: true)
             }
             else {
