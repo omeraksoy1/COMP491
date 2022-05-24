@@ -32,7 +32,7 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Q7L-5Y-pd6">
-                    <rect key="frame" x="40" y="200" width="334" height="278.5"/>
+                    <rect key="frame" x="40" y="200" width="334" height="288.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="firstBaseline" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SAk-iq-LmZ">
                             <rect key="frame" x="11.5" y="0.0" width="311" height="53"/>
@@ -64,12 +64,12 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-Pb-apL">
-                            <rect key="frame" x="115.5" y="115" width="103" height="34.5"/>
+                            <rect key="frame" x="123.5" y="115" width="87" height="38"/>
                             <color key="backgroundColor" systemColor="systemTealColor"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Credits">
-                                <fontDescription key="titleFontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.alpha">
@@ -81,12 +81,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIy-5x-xNZ">
-                            <rect key="frame" x="64" y="180.5" width="206" height="34.5"/>
+                            <rect key="frame" x="76" y="184" width="182" height="38"/>
                             <color key="backgroundColor" red="0.3104453848" green="0.73874247439999996" blue="0.48821853799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Change Password">
-                                <fontDescription key="titleFontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.alpha">
@@ -98,12 +98,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edG-8m-ywF">
-                            <rect key="frame" x="114.5" y="246" width="105" height="32.5"/>
+                            <rect key="frame" x="120" y="253" width="94" height="35.5"/>
                             <color key="backgroundColor" systemColor="systemRedColor"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Sign Out">
-                                <fontDescription key="titleFontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.alpha">

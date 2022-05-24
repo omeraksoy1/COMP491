@@ -37,8 +37,10 @@ class ObservationsViewController: BaseViewController {
             let pin = RecordAnnotation()
             pin.data = RecordPin(lat: record.lat, long: record.long, downloadURL: record.downloadURL, stamp: record.stamp)
             pin.coordinate = CLLocationCoordinate2D(latitude: record.lat, longitude: record.long)
-            latArray.append(record.lat)
-            longArray.append(record.long)
+            if record.lat != 0 || record.long != 0 {
+                latArray.append(record.lat)
+                longArray.append(record.long)
+            }
             pin.title = record.stamp
             mapView.addAnnotation(pin)
         }
