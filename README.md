@@ -2,19 +2,18 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube links displaying most of the features of current version. (v0.8.1-v0.8.2-v0.8.3)
+YouTube link displays a demo of the most recent updates. (v1.0)
 
-https://www.youtube.com/shorts/NLRSZsKRewc (larger spectrogram)
-
-https://www.youtube.com/shorts/o6RUhEp1GMQ (mp3 support)
-
-https://www.youtube.com/watch?v=78gjvp06ERA (m4a support)
+https://www.youtube.com/shorts/LeOxEVpQsyo (New features)
 
 Newly added features:
 
-1) Filled up account page to include some statistics on the user.
-2) Added a Credits button to the account page.
-3) Minor UI improvements
+1) Bug fixes for the spectrgram (it now dissapears after every recording and play).
+2) Placement of the spectrogram has been fixed for large screen sizes (iPhone x, 11,12,13).
+3) There are only 2 different fonts throughout the entire application. 
+4) Minor bug fix with playing external files.
+5) Forms do not exceed the screen.
+6) Mınor bug fix wıth playing locally recorded files.
 
 Previously added features:
 1) Sound recording.
@@ -45,3 +44,8 @@ Previously added features:
 26) Improved recording page and reduced whitespace by enlarging the spectrogram.
 27) The app now supports mp3 and m4a for sharing external files.
 28) Fixed bugs and removed redundant code from the recording page.
+29) Filled up account page to include some statistics on the user.
+30) Added a Credits button to the account page.
+31) Minor UI improvements.
+32) Minor fixes with external file sharing.
+
