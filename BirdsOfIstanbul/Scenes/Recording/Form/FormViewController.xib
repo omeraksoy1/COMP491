@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJ4-bJ-yFM">
-                    <rect key="frame" x="30" y="79" width="354" height="500"/>
+                    <rect key="frame" x="30" y="89" width="354" height="500"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iaH-xh-q8Q">
                             <rect key="frame" x="0.0" y="34" width="354" height="400"/>
@@ -69,7 +69,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="gJ4-bJ-yFM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="8pL-nt-pPY"/>
+                <constraint firstItem="gJ4-bJ-yFM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="8pL-nt-pPY"/>
                 <constraint firstItem="gJ4-bJ-yFM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Kod-SO-SLs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gJ4-bJ-yFM" secondAttribute="trailing" constant="30" id="Wh5-zJ-CZH"/>
             </constraints>
