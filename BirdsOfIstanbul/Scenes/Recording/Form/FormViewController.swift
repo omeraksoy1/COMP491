@@ -31,12 +31,15 @@ class FormViewController: BaseViewController {
     var latitude: CLLocationDegrees?
     var timestamp: String?
     
+    
+    let group = DispatchGroup()
+    
     var selectedCell: QuestionTableViewCell?
     
     private var finishedClassification = false
     private var classification = ""
     
-    private var audioURL: String?
+    public var audioURL: String?
     
     func getURL() async {
         let auth = Auth.auth()
@@ -44,20 +47,36 @@ class FormViewController: BaseViewController {
         var documents: [QueryDocumentSnapshot] = []
         
         do {
-            let snapshot = try await db.collection(auth.currentUser!.uid).getDocuments()
-            documents = snapshot.documents
+            while self.audioURL == nil {
+                let snapshot = try await db.collection(auth.currentUser!.uid).getDocuments()
+                documents = snapshot.documents
+                for document in documents {
+                    guard let time = document.get("time") as? String,
+                          let url = document.get("audioURL") as? String else {return}
+                    print(url)
+                    self.audioURL = url
+                    if(time == self.timestamp) {
+                        break
+                    }
+                }
+            }
+            
         } catch {
             print("There was an error")
         }
-        
-        for document in documents {
-            guard let time = document.get("time") as? String,
-                  let url = document.get("audioURL") as? String else {return}
-            self.audioURL = url
-            if(time == self.timestamp) {
-                break
+        while self.audioURL == nil {
+            for document in documents {
+                guard let time = document.get("time") as? String,
+                      let url = document.get("audioURL") as? String else {return}
+                print(url)
+                self.audioURL = url
+                if(time == self.timestamp) {
+                    break
+                }
             }
+            
         }
+        group.leave()
     }
     
     func classify(){
@@ -83,7 +102,6 @@ class FormViewController: BaseViewController {
                 exit(EXIT_FAILURE)
             }
             do {
-                print(r)
                 let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 //let response = try JSONSerialization.jsonObject(with: data)
                 guard let jsonResponse = response as? [String: Any] else {
@@ -104,11 +122,9 @@ class FormViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sleep(2)
-        Task {
-            await getURL()
-            classify()
-        }
+        group.enter()
+        
+        sleep(5)
     }
     
     override func viewDidLoad() {
@@ -123,13 +139,13 @@ class FormViewController: BaseViewController {
     }
     
     func waitForFinish() {
+        classify()
         while(finishedClassification == false) {
             continue
         }
         if classification == "" {
             print("Classification error")
         }
-        classification = "Yellowhammer"
         var bird: Bird? = nil
         for b in loadBirds() {
             if b.name == classification {
@@ -138,6 +154,9 @@ class FormViewController: BaseViewController {
             }
         }
         print(classification)
+        if bird == nil {
+            bird = loadBirds()[0]
+        }
         let birdPopupView = BirdPopupView(bird: bird!)
         let vc = UIHostingController(rootView: birdPopupView)
         self.navigationController?.pushViewController(vc, animated: true)
@@ -173,7 +192,7 @@ class FormViewController: BaseViewController {
                                                                             "audioURL" : downloadUrl!.absoluteString,
                                                                             "place": birdPlace])
                     self.hideLoading()
-                    
+                    self.audioURL = downloadUrl!.absoluteString
                     self.waitForFinish()
                     
                     //let prediction = PredictionViewController()
