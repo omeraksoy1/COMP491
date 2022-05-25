@@ -146,20 +146,33 @@ class FormViewController: BaseViewController {
         if classification == "" {
             print("Classification error")
         }
-        var bird: Bird? = nil
+        
+        print(classification)
+        
+        if let bird = birds.first(where: {$0.name == classification}) {
+            let birdPopupView = BirdPopupView(bird: bird)
+            let vc = UIHostingController(rootView: birdPopupView)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let bird = birds[0]
+            let birdPopupView = BirdPopupView(bird: bird)
+            let vc = UIHostingController(rootView: birdPopupView)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        /*var bird: Bird? = nil
         for b in loadBirds() {
             if b.name == classification {
                 bird = b
                 break
             }
         }
+        
         print(classification)
         if bird == nil {
             bird = loadBirds()[0]
-        }
-        let birdPopupView = BirdPopupView(bird: bird!)
-        let vc = UIHostingController(rootView: birdPopupView)
-        self.navigationController?.pushViewController(vc, animated: true)
+        }*/
+        
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
