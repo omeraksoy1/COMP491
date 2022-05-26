@@ -63,12 +63,16 @@ class ProfileViewController: BaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func didTappedSignout(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            presentAlert(title: "Error", message: "Authorization server error.", buttonTitle: "OK")
+    @IBAction func didTappedSignout(_ sender: Any)
+    {
+        DispatchQueue.main.async {
+            do {
+                try Auth.auth().signOut()
+            } catch {
+                self.presentAlert(title: "Error", message: "Authorization server error.", buttonTitle: "OK")
+            }
         }
+        
     }
     
     @IBAction func didTappedCredits(_ sender: Any) {
