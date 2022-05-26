@@ -24,13 +24,13 @@ class TabBarController: UITabBarController {
         viewControllers = [createRecordNC(), createObservationsNC(), createExploreNC(), createAccountNC()]
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
     
     func createRecordNC() -> UINavigationController {
         let recordVC = RecordingViewController()

@@ -22,6 +22,7 @@ class BaseViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.tintColor = .systemGreen
+        navigationController?.navigationBar.isHidden = true // removes whitespace caused by navigation bar (IMPORTANT)
         navigationController?.navigationItem.hidesBackButton = true
     }
     

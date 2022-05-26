@@ -145,19 +145,22 @@ class FormViewController: BaseViewController {
         }
         if classification == "" {
             print("Classification error")
-        }
-        
-        print(classification)
-        
-        if let bird = birds.first(where: {$0.name == classification}) {
-            let birdPopupView = BirdPopupView(bird: bird)
-            let vc = UIHostingController(rootView: birdPopupView)
+            let vc = RecordingViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-            let bird = birds[0]
-            let birdPopupView = BirdPopupView(bird: bird)
-            let vc = UIHostingController(rootView: birdPopupView)
-            self.navigationController?.pushViewController(vc, animated: true)
+        
+            print(classification)
+            
+            if let bird = birds.first(where: {$0.name == classification}) {
+                let birdPopupView = BirdPopupView(bird: bird)
+                let vc = UIHostingController(rootView: birdPopupView)
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let bird = birds[0]
+                let birdPopupView = BirdPopupView(bird: bird)
+                let vc = UIHostingController(rootView: birdPopupView)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         
         /*var bird: Bird? = nil
