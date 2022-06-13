@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>${PRODUCT_NAME} need access to the camera to update bird photo</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
@@ -46,17 +48,17 @@
 		</dict>
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
+	<string>${PRODUCT_NAME} need access to your location to locate recordings</string>
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
 	<dict/>
 	<key>NSLocationUsageDescription</key>
-	<string></string>
+	<string>${PRODUCT_NAME} need access to your location to locate recordings</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>${PRODUCT_NAME} need access to your location to locate recordings</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>${PRODUCT_NAME} need access to your location to locate recordings</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string></string>
+	<string>${PRODUCT_NAME} need access to the microphone to identify bird name</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

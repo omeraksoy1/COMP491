@@ -19,6 +19,7 @@
 		17E5A2CB27DE474400B97A8D /* BirdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CA27DE474400B97A8D /* BirdList.swift */; };
 		17E5A2CD27DE6C2A00B97A8D /* BirdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5A2CC27DE6C2A00B97A8D /* BirdRowView.swift */; };
 		1D7B06CA737D20D15A301209 /* Pods_BirdsOfIstanbul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EACDB2237DE478D86B5E57 /* Pods_BirdsOfIstanbul.framework */; };
+		63054D392854BD2E00DC827F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B116C27CFC11100116A58 /* Main.storyboard */; };
 		6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6314733227D5F8EE00504E28 /* GoogleService-Info.plist */; };
 		6314733727D5FDD100504E28 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314733527D5FDD100504E28 /* AlertViewController.swift */; };
 		6314733827D5FDD100504E28 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6314733627D5FDD100504E28 /* AlertViewController.xib */; };
@@ -26,7 +27,6 @@
 		63632EFA282DBA8700705340 /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63632EF8282DBA8700705340 /* CreditsViewController.xib */; };
 		636B115927CFBC4500116A58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B115827CFBC4500116A58 /* BaseViewController.swift */; };
 		636B116127CFBEC800116A58 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B116027CFBEC800116A58 /* UIViewController+Ext.swift */; };
-		636B116D27CFC11100116A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B116C27CFC11100116A58 /* Main.storyboard */; };
 		63750AA727EDCA0300842F47 /* UINavigationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63750AA627EDCA0300842F47 /* UINavigationView+Ext.swift */; };
 		6392C50027CFC1F90092E2CC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C4FF27CFC1F90092E2CC /* RootViewController.swift */; };
 		6392C50F27CFC6A80092E2CC /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392C50D27CFC6A80092E2CC /* WalkthroughViewController.swift */; };
@@ -425,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63054D392854BD2E00DC827F /* Main.storyboard in Resources */,
 				63BD151D2806BAF900F36AD4 /* ChangePasswordViewController.xib in Resources */,
 				63632EFA282DBA8700705340 /* CreditsViewController.xib in Resources */,
 				E108DEE427CF7A1600801830 /* LaunchScreen.storyboard in Resources */,
@@ -435,7 +436,6 @@
 				E108DEE127CF7A1600801830 /* Assets.xcassets in Resources */,
 				6392C51427CFC83F0092E2CC /* LoadingViewController.xib in Resources */,
 				63BD15132806AF6800F36AD4 /* ProfileViewController.xib in Resources */,
-				636B116D27CFC11100116A58 /* Main.storyboard in Resources */,
 				63F13784280373C700E2110F /* QuestionTableViewCell.xib in Resources */,
 				6314733327D5F8EE00504E28 /* GoogleService-Info.plist in Resources */,
 				63F1377B280352E100E2110F /* FormViewController.xib in Resources */,
@@ -665,24 +665,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4QSBD3VNW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = Main;
+				INFOPLIST_KEY_NSMainNibFile = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.canxkoz.BirdsOfIstanbul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "bird-of-istanbul";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -695,24 +697,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4QSBD3VNW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirdsOfIstanbul/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = Main;
+				INFOPLIST_KEY_NSMainNibFile = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.canxkoz.BirdsOfIstanbul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "bird-of-istanbul";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
