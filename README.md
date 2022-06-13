@@ -2,9 +2,7 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-YouTube link displays a demo of the most recent updates. (v1.0)
-
-https://www.youtube.com/shorts/LeOxEVpQsyo (New features)
+/// This section will be updated soon to include a better description and perhaps some useful links.
 
 Newly added features:
 
