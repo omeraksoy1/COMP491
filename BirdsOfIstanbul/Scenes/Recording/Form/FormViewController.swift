@@ -39,7 +39,11 @@ class FormViewController: BaseViewController {
     private var finishedClassification = false
     private var classification = ""
     
-    public var audioURL: String?
+    public var audioURL: String? {
+        didSet {
+            continueButton.isEnabled = true
+        }
+    }
     
     func getURL() async {
         let auth = Auth.auth()
@@ -123,7 +127,7 @@ class FormViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         group.enter()
-        
+        continueButton.isEnabled = false
         sleep(5)
     }
     
@@ -148,7 +152,7 @@ class FormViewController: BaseViewController {
             let vc = RecordingViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-        
+            self.hideLoading()
             print(classification)
             
             if let bird = birds.first(where: {$0.name == classification}) {

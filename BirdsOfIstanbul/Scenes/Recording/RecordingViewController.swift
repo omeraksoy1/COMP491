@@ -24,6 +24,7 @@ class RecordingViewController: BaseViewController {
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var stopRecordButton: UIButton!
     @IBOutlet weak var recordListTableView: UITableView!
+    @IBOutlet weak var stopPlayingButton: UIButton!
     
     
     var recordList: [Record] = [] {
@@ -56,6 +57,7 @@ class RecordingViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureStopPlayingButton()
     }
     
     @objc func reloadData(_ notification: Notification?) {
@@ -193,6 +195,22 @@ class RecordingViewController: BaseViewController {
         stopRecordButton.isHidden = true
     }
     
+    private func configureStopPlayingButton() {
+        stopPlayingButton.addTarget(self, action: #selector(stopPlaying), for: .touchUpInside)
+        stopRecordButton.isHidden = true
+    }
+    
+    @objc private func stopPlaying() {
+        player.pause()
+        DispatchQueue.main.async {
+            self.stopRecordButton.isHidden = true
+            self.stopPlayingButton.isHidden = true
+            self.recordingButton.isEnabled = true
+            self.playButton.isEnabled = true
+            self.shareButton.isEnabled = true
+        }
+    }
+    
     private func playSelectedRecording() {
         isButtonsDeactivated(value: true)
         audioSpectrumView.isHidden = false
@@ -212,6 +230,7 @@ class RecordingViewController: BaseViewController {
             player.delegate = self
             audioSpectrogram.isHidden = false
             player.play()
+            stopPlayingButton.isHidden = false
         } catch {
             presentAlert(title: "Error", message: "Please check device hardware.", buttonTitle: "OK")
         }

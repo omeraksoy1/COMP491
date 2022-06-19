@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,6 +17,7 @@
                 <outlet property="recordingButton" destination="Gyt-20-vJT" id="ud8-Lh-y9h"/>
                 <outlet property="shareButton" destination="fbQ-Lc-qPw" id="pvu-8M-noJ"/>
                 <outlet property="stackView" destination="zLA-90-SIL" id="ed1-2w-qkO"/>
+                <outlet property="stopPlayingButton" destination="mwd-df-Tf4" id="Uq8-lT-qzG"/>
                 <outlet property="stopRecordButton" destination="uVt-4j-uvR" id="B7s-sV-ufc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -102,19 +103,40 @@
                         <outlet property="delegate" destination="-1" id="LdS-Wb-e6W"/>
                     </connections>
                 </tableView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-df-Tf4">
+                    <rect key="frame" x="182" y="343" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0gK-Di-9U3"/>
+                        <constraint firstAttribute="width" constant="50" id="9Un-qF-3Ua"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="de4-2L-Fie"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="pg1-qd-TJ6"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="3rz-ox-jFN" firstAttribute="top" secondItem="zLA-90-SIL" secondAttribute="bottom" constant="10" id="1jC-wn-0nx"/>
                 <constraint firstItem="3rz-ox-jFN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="2f1-FV-umS"/>
+                <constraint firstItem="3rz-ox-jFN" firstAttribute="top" secondItem="mwd-df-Tf4" secondAttribute="bottom" constant="4" id="HbS-we-kiS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ls-SC-gL6" secondAttribute="trailing" id="OeM-0H-EUv"/>
                 <constraint firstItem="uVt-4j-uvR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="QiA-mM-siO"/>
                 <constraint firstItem="zLA-90-SIL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UPr-VG-tMy"/>
                 <constraint firstItem="zLA-90-SIL" firstAttribute="top" secondItem="uVt-4j-uvR" secondAttribute="bottom" constant="14" id="Zx8-id-VeK"/>
+                <constraint firstItem="mwd-df-Tf4" firstAttribute="top" secondItem="uVt-4j-uvR" secondAttribute="bottom" constant="10" id="e9M-l1-T08"/>
                 <constraint firstItem="5Ls-SC-gL6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="etq-Jn-Dtp"/>
                 <constraint firstItem="5Ls-SC-gL6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="p7i-Fm-7OZ"/>
                 <constraint firstItem="uVt-4j-uvR" firstAttribute="top" secondItem="5Ls-SC-gL6" secondAttribute="bottom" constant="19" id="uhK-ld-3mL"/>
+                <constraint firstItem="mwd-df-Tf4" firstAttribute="leading" secondItem="uVt-4j-uvR" secondAttribute="leading" id="wSN-cw-RlN"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </view>

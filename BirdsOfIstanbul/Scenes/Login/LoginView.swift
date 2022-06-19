@@ -63,7 +63,7 @@ struct LoginView: View {
                 .cornerRadius(8)
                 .border(.gray, width: 0.3)
             
-            ActivityIndicatorView(isVisible: self.$showLoadingIndicator, type: .rotatingDots)
+            ActivityIndicatorView(isVisible: self.$showLoadingIndicator, type: .rotatingDots())
                 .frame(width: 30, height: 30)
                 .foregroundColor(.green)
             Button(action: {

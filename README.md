@@ -2,9 +2,18 @@
 
 ##### Group members: Ömer Aksoy, Can Köz, Kutay Eroğlu, Farrin Marouf Sofian, Andrew Bond
 
-/// This section will be updated soon to include a better description and perhaps some useful links.
+YouTube link displays a demo of the most recent updates. (v1.0)
+
+https://www.youtube.com/shorts/LeOxEVpQsyo (New features)
 
 Newly added features:
+
+1) Bug fixes for the spectrgram (it now dissapears after every recording and play).
+2) Placement of the spectrogram has been fixed for large screen sizes (iPhone x, 11,12,13).
+3) There are only 2 different fonts throughout the entire application. 
+4) Minor bug fix with playing external files.
+5) Forms do not exceed the screen.
+6) Mınor bug fix wıth playing locally recorded files.
 
 Previously added features:
 1) Sound recording.
@@ -39,10 +48,4 @@ Previously added features:
 30) Added a Credits button to the account page.
 31) Minor UI improvements.
 32) Minor fixes with external file sharing.
-33) Bug fixes for the spectrgram (it now dissapears after every recording and play).
-34) Placement of the spectrogram has been fixed for large screen sizes (iPhone X, 11,12,13).
-35) There are only 2 different fonts throughout the entire application. 
-36) Minor bug fix with playing external files.
-37) Forms do not exceed the screen.
-38) Minor bug fix wıth playing locally recorded files.
 
